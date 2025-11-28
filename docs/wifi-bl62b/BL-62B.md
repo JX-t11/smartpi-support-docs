@@ -4,19 +4,48 @@ icon: lucide/wifi
 description: BL-62B WiFi+BLE 模组的规格说明、设计要点与开发流程。
 ---
 
-# WiFi模组 BL-62B 章节文档
+# WiFi模组 BL-62B
 
-## 1. 文档定位与适用场景
-- **文档目标**：面向需要将 BL-62B WiFi+BLE 模组快速集成到物联网终端的硬件与嵌入式开发者，提供规格、设计、开发、量产、维护所需的最小必备信息。
-- **适用角色**：硬件工程师（原理图/PCB 设计）、嵌入式软件工程师（固件与 AT 配置）、生产测试工程师（烧录、校准）、项目经理（版本控制与交付验收）。
+## 快速规格一览
+
+| 参数 | BL-62B |
+|------|--------|
+| 主控芯片 | **BL602** (32位 RISC-V CPU) |
+| WiFi | **2.4GHz 802.11b/g/n** |
+| 蓝牙 | **BLE 5.0** |
+| 供电电压 | 3.0V~3.6V (推荐3.3V) |
+| Flash | 2MB QSPI Flash |
+| RAM | 276KB |
+| 接口 | UART/GPIO/ADC/DAC/PWM/I2C/SDIO/SPI/IR |
+| 封装尺寸 | 16×24×3mm (SMD16/DIP-16) |
+
+---
+
+## 定位与适用场景
+
+- **定位**：WiFi+BLE 双模无线模组，适合 IoT 应用
+- **适用角色**：硬件工程师、嵌入式软件工程师、生产测试工程师
 - **典型场景**：
-  1. 家电联网（如空调、冰箱）通过 Wi-Fi 上报状态、下发控制。
-  2. 工业/仓储传感器以 Wi-Fi 上传数据，并使用 BLE 做调试或配网。
-  3. 智慧灯光/智能插座等低功耗控制设备需要 Wi-Fi 与 BLE 双模协同。
-- **使用方式**：可作为模组数据手册补充，或作为开发入门的 SOP。
+  - **家电联网**：空调、冰箱 Wi-Fi 上报状态、下发控制
+  - **工业传感器**：Wi-Fi 上传数据，BLE 调试或配网
+  - **智慧灯光/插座**：低功耗控制设备 Wi-Fi+BLE 双模协同
 
-## 2. 模组概述与规格参数
+---
+
+## 模组概述
+
 BL-62B 基于 BL602 SoC，集成 2.4G 802.11b/g/n Wi-Fi 与 BLE 5.0，具备低功耗 32 位 RISC CPU、Cache 与片上存储。外围接口涵盖 UART、GPIO、ADC、DAC、PWM、I2C、SDIO、SPI、IR 等，适合需要 Wi-Fi 与 BLE 并存的 IoT 场景。
+
+### 官方资料下载
+
+| 资料 | 链接 |
+|------|------|
+| 官方文档首页 | [查看](https://help.aimachip.com/docs/wifi_bl62b) |
+| 模组规格书 V1.2 | [下载](https://help.aimachip.com/attach_files/wifi_bl62b/309) |
+| 开发板用户指南 V1.1 | [下载](https://help.aimachip.com/attach_files/wifi_bl62b/310) |
+| 入门例程 | [下载](https://help.aimachip.com/attach_files/wifi_bl62b/648) |
+
+---
 
 ### 2.1 关键特性概述
 | 类别 | 说明 |
@@ -330,3 +359,13 @@ bl62b-sdk/
 | BLE 搜索不到 | BLE 未启用或广播间隔过长 | 通过日志确认 BLE 初始化；调整广播间隔至 100~500 ms。|
 | MQTT 无法上线 | 证书/时间配置缺失 | 检查 TLS 根证书、系统时间；可在启动阶段通过 SNTP 或平台时间戳 API 同步。|
 | OTA 失败 | 分区设置错误或网络超时 | 校验 `partition_cfg`，并在日志中查找 `OTA` 关键字；必要时降低下载速度。|
+
+---
+
+## 参考链接
+
+| 资源 | 链接 |
+|------|------|
+| BL-62B 官方文档首页 | [https://help.aimachip.com/docs/wifi_bl62b](https://help.aimachip.com/docs/wifi_bl62b) |
+| JX-12F 开发手册（参考） | [https://help.aimachip.com/docs/jx12f/jx12f-1f5tmab5mhti1](https://help.aimachip.com/docs/jx12f/jx12f-1f5tmab5mhti1) |
+| 智能公元平台 | [https://smartpi.cn](https://smartpi.cn) |
