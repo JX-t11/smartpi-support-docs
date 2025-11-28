@@ -1,0 +1,10 @@
+# Zensical (新)
+zensical>=0.0.10
+
+# MkDocs (备用回退)
+# mkdocs>=1.5.0
+# mkdocs-material>=9.0.0
+# mkdocs-git-revision-date-localized-plugin>=1.2.0
+# pymdown-extensions>=9.0
+# jieba>=0.42.1
+# mkdocs-glightbox
