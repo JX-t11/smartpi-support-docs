@@ -1,20 +1,60 @@
+---
+title: 离线语音模组 SU-22T
+icon: material/microphone
+description: 低功耗离线语音模组 SU-22T 完整开发指南，内置1W功放，适合电池供电产品。
+---
 
 # 离线语音模组 SU-22T
 
-## 文档定位与适用场景
-- 适合家电、玩具、语音面板等无需联网即可响应的产品。
-- 优势：低延时、本地数据安全；限制：词表容量有限，需要预置指令。
+## 快速规格一览
 
-## 模组概述与规格参数
+| 参数 | SU-22T |
+|------|--------|
+| 主控芯片 | 32bit RISC @50MHz |
+| 架构 | **低功耗语音专用 NPU** |
+| 词条数 | **50**（推荐） |
+| 供电电压 | **3.3V**（严禁5V） |
+| 接口电平 | 3.3V |
+| 功放 | **1W**（内置AB类） |
+| Flash | 1MB |
+| SRAM | 208KB |
+| 识别距离 | 3-5米远场 |
+| 封装 | **小体积** |
 
-SU-22T 是一款低成本、低功耗、小体积的离线语音识别模组。
+### SU-22T 定位
+
+> SU-22T 是 **低功耗小体积模组**：
+> - **特点**：内置 1W 功放，低功耗设计
+> - **对比 SU-21T**：内置功放（SU-21T无功放）
+> - **适用场景**：手持设备、电池供电产品、智能家居
+
+---
+
+## 定位与适用场景
+
+- **定位**：低成本、低功耗、小体积的离线语音识别模组
+- **适用场景**：
+  - **智能家居**：86盒、灯具、开关面板
+  - **智能小家电**：风扇、加湿器、空气净化器
+  - **玩具产品**：故事机、互动玩偶
+  - **电池供电产品**：手持风扇、遥控器
+- **优势**：低延时、本地数据安全、内置功放
+- **注意**：**供电电压必须为 3.3V**
+
+---
+
+## 模组概述
+
+SU-22T 是一款低成本、低功耗、小体积的离线语音识别模组，能快速应用于智能家居、各类智能小家电、86盒、玩具、灯具等语音操控的产品。其低功耗特性亦特别适合于手持语音识别产品、电池供电产品等应用。支持50条本地指令离线3-5米远场识别，支持RTOS轻量级系统，具有丰富的外围接口。
 
 ### 功能框图
 ![功能框图](http://help.aimachip.com/uploads/offline_su22t/images/m_3d413b27beb6e1e7bd88ff442ca11fee_r.png "SU-22T功能框图")
 
 ### 外观尺寸
 ![尺寸图1](http://help.aimachip.com/uploads/offline_su22t/images/m_02b3765d97f7c018de8cbeff11976994_r.png "外观尺寸")
-![尺寸图2](http://help.aimachip.com/uploads/offline_su22t/images/m_05ce407347c6b78fd1cb35e0ee00ac48_r.png "侧面尺寸"),支持50条本地指令离线3-5米远场识别，支持RTOS轻量级系统，具有丰富的外围接口。特别适合于手持语音识别产品、电池供电产品等应用。
+![尺寸图2](http://help.aimachip.com/uploads/offline_su22t/images/m_05ce407347c6b78fd1cb35e0ee00ac48_r.png "侧面尺寸")
+
+### 核心特性
 
 | 指标 | 内容 |
 | --- | --- |
@@ -29,12 +69,16 @@ SU-22T 是一款低成本、低功耗、小体积的离线语音识别模组。
 | 接口 | 1路UART, 2路I2C (400kHz), SPI (Master/Slave), PWM |
 | 识别能力 | 支持50条本地指令，3-5米远场识别 |
 
-> 完整资料参考：
-> - [SU-22T 官方文档](https://help.aimachip.com/docs/offline_su22t)
-> - [规格书](https://help.aimachip.com/docs/offline_su22t/offline_su22t-1gb2jmqk30o27)
-> - [原理图](https://help.aimachip.com/docs/offline_su22t/offline_su22t-1gb2jlv1a2utp)
+### 官方资料下载
 
-### 主要参数
+| 资料 | 链接 |
+|------|------|
+| 官方文档首页 | [查看](https://help.aimachip.com/docs/offline_su22t) |
+| 规格书 V1.1 | [下载](https://help.aimachip.com/attach_files/offline_su22t/900) |
+| 串口调试软件 | [下载](https://help.aimachip.com/attach_files/offline_su22t/910) |
+| 喇叭和咪头选型 | [下载](https://help.aimachip.com/attach_files/offline_su22t/905) |
+
+### 主要参数表
 ![主要参数](http://help.aimachip.com/uploads/offline_su22t/images/m_c86ce5cd6a7507255f7a4c632700c42e_r.png "详细参数表")
 
 ## 硬件设计指南
@@ -43,12 +87,29 @@ SU-22T 是一款低成本、低功耗、小体积的离线语音识别模组。
 3. 串口/IO：预留调试接口并加 ESD 保护。
 
 ## 开发环境与工具
-- [开发包下载](https://help.aimachip.com/docs/offline_su22t/offline_su22t-1eb42ql1i4h75)
-- [CH340驱动](https://help.aimachip.com/docs/offline_su22t/offline_su22t-1gb2j6ifmvg1t)
-- [烧录软件](https://help.aimachip.com/docs/offline_su22t/offline_su22t-1gb2j7enh3ild)
-- [串口调试工具](https://help.aimachip.com/docs/offline_su22t/offline_su22t-1gb2j8frbqhfo)
-- [产品结构声学规范](https://help.aimachip.com/docs/offline_su22t/offline_su22t-1gb2jdkhahq9q)
-- [喇叭和咪头选型](https://help.aimachip.com/docs/offline_su22t/offline_su22t-1gb2je1b0lk5i)
+
+### 开发工具下载
+
+| 工具 | 说明 | 下载链接 |
+|------|------|---------|
+| 串口调试软件 | 日志查看与命令调试 | [下载](https://help.aimachip.com/attach_files/offline_su22t/910) |
+| 喇叭和咪头选型 | 音频器件选型参考 | [下载](https://help.aimachip.com/attach_files/offline_su22t/905) |
+
+### 芯片资料
+
+> **蜂鸟L系列 (US513U6/US513U61)** 是一颗亚毫瓦级超低功耗智能纯离线语音识别芯片，面向带电池和便携式产品以及对功耗有严苛要求的各类产品。
+> - 采用 MCU + 语音识别专用 NPU 架构内核
+> - 支持 DNN/TDNN/LSTM 等主流网络
+> - 内置低功耗语音专用 NPU
+> - 支持 50 条本地指令离线 3-5 米远场识别
+> - 支持 RTOS 轻量级系统
+
+| 资料 | 链接 |
+|------|------|
+| 蜂鸟L 芯片详情 | [查看](http://help.aimachip.com/docs/chip/chip-1e9c8p36onh9g) |
+| 蜂鸟L SOC产品手册 | [下载](https://help.aimachip.com/attach_files/chip/427) |
+| 蜂鸟L 离线方案开发指导手册 | [下载](https://help.aimachip.com/attach_files/chip/429) |
+| 蜂鸟L 参考原理图 | [下载](https://help.aimachip.com/attach_files/chip/428) |
 
 ## 固件烧录与升级指南
 1. 通过 USB/UART 将固件写入 Flash。
@@ -60,12 +121,23 @@ SU-22T 是一款低成本、低功耗、小体积的离线语音识别模组。
 - 串口协议：0xAA 0x55 CMD LEN DATA CS（详见旧文档）。
 
 > 教程参考：
-> - [SU-22T语音控制四路继电器](https://help.aimachip.com/docs/offline_su22t/offline_su22t-1epdknhetaa11)
-> - [串口烧录教程](https://help.aimachip.com/docs/offline_su22t/offline_su22t-1eqfq5oj20nn8)
-> - [利用PWM灯光亮度调节和呼吸灯](https://help.aimachip.com/docs/offline_su22t/offline_su22t-1eqg6058go5fd)
-> - [SU-22T串口输入输出教学](https://help.aimachip.com/docs/offline_su22t/offline_su22t-1eqifb3sfe2m9)
+> - [SU-22T语音控制四路继电器](https://help.aimachip.com/docs/offline_su22t/offline_su22t-1epdknhetaa11) - [资料下载](https://help.aimachip.com/attach_files/offline_su22t/555)
+> - [串口烧录教程](https://help.aimachip.com/docs/offline_su22t/offline_su22t-1eqfq5oj20nn8) - [资料下载](https://help.aimachip.com/attach_files/offline_su22t/563)
+> - [利用PWM灯光亮度调节和呼吸灯](https://help.aimachip.com/docs/offline_su22t/offline_su22t-1eqg6058go5fd) - [资料下载](https://help.aimachip.com/attach_files/offline_su22t/564)
+> - [SU-22T串口输入输出教学](https://help.aimachip.com/docs/offline_su22t/offline_su22t-1eqifb3sfe2m9) - [资料下载](https://help.aimachip.com/attach_files/offline_su22t/565)
 
 ## 外设开发与应用示例
 - 继电器：识别指令后驱动 GPIO 切换。
 - 串口反馈：将识别到的词 ID 发给主控。
 - 联动应用：与 WiFi 模组结合，实现语音+云端控制。
+
+---
+
+## 参考链接
+
+| 资源 | 链接 |
+|------|------|
+| SU-22T 官方文档首页 | [https://help.aimachip.com/docs/offline_su22t](https://help.aimachip.com/docs/offline_su22t) |
+| 蜂鸟L 芯片资料 | [https://help.aimachip.com/docs/chip/chip-1e9c8p36onh9g](http://help.aimachip.com/docs/chip/chip-1e9c8p36onh9g) |
+| 智能公元平台 | [https://smartpi.cn](https://smartpi.cn) |
+| SU-21T 文档（参考） | [https://help.aimachip.com/docs/offline_su21t](https://help.aimachip.com/docs/offline_su21t) |

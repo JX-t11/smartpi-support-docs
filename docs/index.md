@@ -25,7 +25,7 @@ description: 智能公元平台在不同模组、平台入口以及工具链上�
   图形化搭积木的方式编写逻辑，对零基础用户友好。
 - [在线语音模组 · 天猫精灵](online-voice-tmall/tmall-genie.md)  
   天猫精灵在线语音模组的接入、配置与调试说明。
-- [离在线语音 AI 大模型模组 · JX-A7T](offline-online-ai-jxa7t/JX-A7T.md)  
+- [离在线语音 AI 大模型模组 · JX-A7T](offline-online-ai-jxa7t/jx-a7t.md)  
   JX-A7T 模组的功能特性、开发流程与示例工程。
 - [小程序平台操作指南](miniapp-guide/miniapp-guide.md)  
   智能公元小程序平台入口、项目管理与调试步骤。
@@ -44,35 +44,32 @@ description: 智能公元平台在不同模组、平台入口以及工具链上�
 
 </div>
 
-## 模组与硬件章节
+## 模组与硬件
 
 <div class="grid cards" markdown>
 
-- [WiFi 模组 · JX-12F](wifi-jx12f/JX-12F.md)  
+- [WiFi 模组 · JX-12F](wifi-jx12f/jx-12f.md)  
   JX-12F WiFi 模组的引脚说明、AT 指令与应用示例。
-- [WiFi 模组 · BL-62B](wifi-bl62b/BL-62B.md)  
+- [WiFi 模组 · BL-62B](wifi-bl62b/bl-62b.md)  
   BL-62B WiFi 模组的基本资料、配置步骤与调试要点。
-- [WiFi 图像模组 · XR-50A](wifi-image-xr50a/XR-50A.md)  
+- [WiFi 图像模组 · XR-50A](wifi-image-xr50a/xr-50a.md)  
   XR-50A 图像模组的硬件连接、图像采集与传输配置。
-- [离线语音模组 · CI 系列](offline-voice-ci03t/CI-03T.md) — 包含 CI-03T、CI-33T、CI-73T、CI-95C、CI-96Z 等目录  
+- [离线语音模组 · CI 系列](offline-voice-ci03t/ci-03t.md) — 包含 CI-03T、CI-33T、CI-73T、CI-95C、CI-96Z 等目录  
   CI 系列各型号离线语音模组的统一入口与资料索引。
-- [离线语音模组 · SU 系列](offline-voice-su03t/SU-03T.md) — 包含 SU-03T、SU-10A、SU-11T、SU-13T、SU-20T、SU-21T、SU-22T、SU-23T、SU-30T-31T、SU-32T、SU-63T 等目录  
+- [离线语音模组 · SU 系列](offline-voice-su03t/su-03t.md) — 包含 SU-03T、SU-10A、SU-11T、SU-13T、SU-20T、SU-21T、SU-22T、SU-23T、SU-30T-31T、SU-32T、SU-63T 等目录  
   SU 系列各型号离线语音模组的统一入口与资料索引。
-- [离线语音模组 · JX-B5C](offline-voice-jxb5c/JX-B5C.md)  
+- [离线语音模组 · JX-B5C](offline-voice-jxb5c/jx-b5c.md)  
   JX-B5C 离线语音模组的硬件资料、固件与开发指南。
 
 </div>
 
-## 支撑资料
+## 资料
 
 <div class="grid cards" markdown>
 
 - [模块性能与选型](module-performance/module-selection.md)  
   对比各模组关键指标，为项目选型提供参考。
-- 芯片手册（待补充）  
+- [芯片手册](chip/chip.md)  
   核心芯片的规格书、寄存器说明等原始技术资料。
 
 </div>
-
-!!! info "新增章节时的命名建议"
-    如果需要新增章节，优先检查目录中是否已经存在同型号文档；若无，请仿照同系列的目录结构创建，名称格式保持 `离线语音模组 XX-YY` 或 `WiFi模组 XX-YY`。

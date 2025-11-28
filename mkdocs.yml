@@ -1,11 +1,11 @@
 site_name: 智能公元平台操作指导文档
 site_description: 智能公元平台在不同模组、平台入口以及工具链上的全部操作文档
 site_author: 智能公元技术团队
-site_url: https://lumincc.github.io/jx_online_docs
+site_url: https://github.com/JX-t11/smartpi-support-docs
 
 # Repository
-repo_name: lumincc/jx_online_docs
-repo_url: https://github.com/lumincc/jx_online_docs
+repo_name: JX-t11/smartpi-support-docs
+repo_url: https://github.com/JX-t11/smartpi-support-docs
 edit_uri: edit/main/docs/
 
 # Copyright
@@ -119,31 +119,31 @@ nav:
   - 模组资料:
     - 离线语音模组:
       - SU系列:
-        - SU-03T: offline-voice-su03t/SU-03T.md
-        - SU-10A: offline-voice-su10a/SU-10A.md
-        - SU-11T: offline-voice-su11t/SU-11T.md
-        - SU-13T: offline-voice-su13t/SU-13T.md
-        - SU-20T: offline-voice-su20t/SU-20T.md
-        - SU-21T: offline-voice-su21t/SU-21T.md
-        - SU-22T: offline-voice-su22t/SU-22T.md
-        - SU-23T: offline-voice-su23t/SU-23T.md
-        - SU-30T-31T: offline-voice-su30t31t/SU-30T-31T.md
-        - SU-32T: offline-voice-su32t/SU-32T.md
-        - SU-63T: offline-voice-su63t/SU-63T.md
+        - SU-03T: offline-voice-su03t/su-03t.md
+        - SU-10A: offline-voice-su10a/su-10a.md
+        - SU-11T: offline-voice-su11t/su-11t.md
+        - SU-13T: offline-voice-su13t/su-13t.md
+        - SU-20T: offline-voice-su20t/su-20t.md
+        - SU-21T: offline-voice-su21t/su-21t.md
+        - SU-22T: offline-voice-su22t/su-22t.md
+        - SU-23T: offline-voice-su23t/su-23t.md
+        - SU-30T-31T: offline-voice-su30t31t/su-30t-31t.md
+        - SU-32T: offline-voice-su32t/su-32t.md
+        - SU-63T: offline-voice-su63t/su-63t.md
       - CI系列:
-        - CI-03T: offline-voice-ci03t/CI-03T.md
-        - CI-33T: offline-voice-ci33t/CI-33T.md
-        - CI-73T: offline-voice-ci73t/CI-73T.md
-        - CI-95C: offline-voice-ci95c/CI-95C.md
-        - CI-96Z: offline-voice-ci96z/CI-96Z.md
+        - CI-03T: offline-voice-ci03t/ci-03t.md
+        - CI-33T: offline-voice-ci33t/ci-33t.md
+        - CI-73T: offline-voice-ci73t/ci-73t.md
+        - CI-95C: offline-voice-ci95c/ci-95c.md
+        - CI-96Z: offline-voice-ci96z/ci-96z.md
       - JX系列:
-        - JX-B5C: offline-voice-jxb5c/JX-B5C.md
+        - JX-B5C: offline-voice-jxb5c/jx-b5c.md
     - AI模组:
-      - JX-A7T: offline-online-ai-jxa7t/JX-A7T.md
+      - JX-A7T: offline-online-ai-jxa7t/jx-a7t.md
     - WiFi模组:
-      - WiFi图像模组 XR-50A: wifi-image-xr50a/XR-50A.md
-      - WiFi模组 BL-62B: wifi-bl62b/BL-62B.md
-      - WiFi模组 JX-12F: wifi-jx12f/JX-12F.md
+      - WiFi图像模组 XR-50A: wifi-image-xr50a/xr-50a.md
+      - WiFi模组 BL-62B: wifi-bl62b/bl-62b.md
+      - WiFi模组 JX-12F: wifi-jx12f/jx-12f.md
     - 在线语音模组:
       - 天猫精灵: online-voice-tmall/tmall-genie.md
   - 开发指南:
@@ -157,11 +157,13 @@ nav:
       - 模块性能与选型: module-performance/module-selection.md
     - 扩展与开源:
       - 开源仓库: open-source/open-source.md
+    - 芯片手册: chip/chip.md
   - 常见问题: 
+    - 常见问题: faq/faq.md
     - 应用场景与项目: faq/application_scenarios.md
     - 平台与固件: faq/platform_and_firmware.md
     - 烧录与调试: faq/burning_and_debug.md
-    - 商务与交付: faq/business_and_delivery.md
+    # - 商务与交付: faq/business_and_delivery.md
     - 语音调优: faq/voice_tuning.md
     - 硬件设计: faq/hardware_design.md
     - 模块选型: faq/module_selection.md
@@ -169,7 +171,7 @@ nav:
 extra:
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/lumincc/jx_online_docs
+      link: https://github.com/JX-t11/smartpi-support-docs
     - icon: lucide/building-2
       link: https://smartpi.cn
   version:
