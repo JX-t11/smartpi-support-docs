@@ -1,0 +1,177 @@
+site_name: 智能公元平台操作指导文档
+site_description: 智能公元平台在不同模组、平台入口以及工具链上的全部操作文档
+site_author: 智能公元技术团队
+site_url: https://lumincc.github.io/jx_online_docs
+
+# Repository
+repo_name: lumincc/jx_online_docs
+repo_url: https://github.com/lumincc/jx_online_docs
+edit_uri: edit/main/docs/
+
+# Copyright
+copyright: Copyright &copy; 2025 智能公元技术团队
+
+# Configuration
+docs_dir: docs
+site_dir: site
+
+theme:
+  name: material
+  variant: modern
+  language: zh
+  font:
+    text: Inter
+    code: JetBrains Mono
+  features:
+    - announce.dismiss
+    - content.code.annotate
+    - content.code.copy
+    - content.code.select
+    - content.tabs.link
+    - content.tooltips
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    # - navigation.expand # 会自动展开当前页面所在的分支
+    - navigation.path
+    - navigation.indexes
+    - navigation.top
+    - navigation.footer
+    - navigation.instant
+    - navigation.instant.prefetch
+    - navigation.instant.progress
+    - navigation.tracking
+    - search.suggest
+    - search.highlight
+    - search.share
+    - toc.follow
+
+  palette:
+    # 浅色模式
+    - scheme: default
+      primary: teal
+      accent: teal
+      toggle:
+        icon: lucide/sun
+        name: Switch to dark mode
+    # 深色模式  
+    - scheme: slate
+      primary: teal
+      accent: teal
+      toggle:
+        icon: lucide/moon
+        name: Switch to light mode
+
+# Zensical 尚不支持以下插件，暂时注释
+# plugins:
+#   - search:
+#       lang: 
+#         - zh
+#       separator: '[\s\-]+'
+#       jieba_dict: dict.txt.big
+#   - tags:
+#       tags_file: tags.md
+#   - git-revision-date-localized:
+#       enable_creation_date: true
+#       type: timeago
+#   - glightbox:
+#       touchNavigation: true
+#       loop: false
+#       effect: zoom
+#       zoomable: true
+#       draggable: true
+#       auto_caption: true
+#       auto_themed: true
+
+markdown_extensions:
+  - admonition
+  - abbr
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.tabbed:
+      alternate_style: true
+  - tables
+  - footnotes
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - md_in_html
+  - toc:
+      permalink: true
+      title: 目录
+
+nav:
+  - 首页: index.md
+  - 平台使用教程: 
+    - 智能体平台:
+      - 智能体: ai-agents/ai-agent.md
+      - 智能体控制台指南: ai-agents/platform-guide.md
+    - 小程序平台操作指南: miniapp-guide/miniapp-guide.md
+  - 模组资料:
+    - 离线语音模组:
+      - SU系列:
+        - SU-03T: offline-voice-su03t/SU-03T.md
+        - SU-10A: offline-voice-su10a/SU-10A.md
+        - SU-11T: offline-voice-su11t/SU-11T.md
+        - SU-13T: offline-voice-su13t/SU-13T.md
+        - SU-20T: offline-voice-su20t/SU-20T.md
+        - SU-21T: offline-voice-su21t/SU-21T.md
+        - SU-22T: offline-voice-su22t/SU-22T.md
+        - SU-23T: offline-voice-su23t/SU-23T.md
+        - SU-30T-31T: offline-voice-su30t31t/SU-30T-31T.md
+        - SU-32T: offline-voice-su32t/SU-32T.md
+        - SU-63T: offline-voice-su63t/SU-63T.md
+      - CI系列:
+        - CI-03T: offline-voice-ci03t/CI-03T.md
+        - CI-33T: offline-voice-ci33t/CI-33T.md
+        - CI-73T: offline-voice-ci73t/CI-73T.md
+        - CI-95C: offline-voice-ci95c/CI-95C.md
+        - CI-96Z: offline-voice-ci96z/CI-96Z.md
+      - JX系列:
+        - JX-B5C: offline-voice-jxb5c/JX-B5C.md
+    - AI模组:
+      - JX-A7T: offline-online-ai-jxa7t/JX-A7T.md
+    - WiFi模组:
+      - WiFi图像模组 XR-50A: wifi-image-xr50a/XR-50A.md
+      - WiFi模组 BL-62B: wifi-bl62b/BL-62B.md
+      - WiFi模组 JX-12F: wifi-jx12f/JX-12F.md
+    - 在线语音模组:
+      - 天猫精灵: online-voice-tmall/tmall-genie.md
+  - 开发指南:
+    - 开发入门:
+      - Block积木编程: block-programming/block-programming.md
+      - 教程和示例固件: tutorials-examples/tutorials.md
+    - 实战与案例:
+      - 智能公元平台开发案例: platform-cases/platform-cases.md
+    - 设计与选型:
+      - 产品结构设计指南: product-design-guide/design-guide.md
+      - 模块性能与选型: module-performance/module-selection.md
+    - 扩展与开源:
+      - 开源仓库: open-source/open-source.md
+  - 常见问题: 
+    - 应用场景与项目: faq/application_scenarios.md
+    - 平台与固件: faq/platform_and_firmware.md
+    - 烧录与调试: faq/burning_and_debug.md
+    - 商务与交付: faq/business_and_delivery.md
+    - 语音调优: faq/voice_tuning.md
+    - 硬件设计: faq/hardware_design.md
+    - 模块选型: faq/module_selection.md
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/lumincc/jx_online_docs
+    - icon: lucide/building-2
+      link: https://smartpi.cn
+  version:
+    provider: mike
+    default: stable
