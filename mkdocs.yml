@@ -167,6 +167,7 @@ nav:
     - 语音调优: faq/voice_tuning.md
     - 硬件设计: faq/hardware_design.md
     - 模块选型: faq/module_selection.md
+  - 免责声明: disclaimer.md
 
 extra:
   social:
