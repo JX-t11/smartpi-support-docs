@@ -1,3 +1,9 @@
+---
+title: 智能体
+icon: material/robot
+description: 智能体入门、API 接入与设备控制配置指南
+---
+
 # 智能体
 
 ## 入门

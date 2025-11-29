@@ -1,6 +1,7 @@
 ---
 title: 智能体平台操作指南
-description: 智能体平台操作指南。
+icon: lucide/settings
+description: 智能体平台操作指南，包含 API 接入、MCP 与 Coze 插件配置
 ---
 # 智能体平台操作指南
 
