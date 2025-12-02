@@ -22,25 +22,25 @@ description: 智能公元平台在不同模组、平台入口以及工具链上�
 <div class="grid cards" markdown>
 
 - [Block 积木编程](block-programming/block-programming.md)  
-  图形化搭积木的方式编写逻辑，对零基础用户友好。
+    图形化搭积木的方式编写逻辑，对零基础用户友好。
 - [在线语音模组 · 天猫精灵](online-voice-tmall/tmall-genie.md)  
-  天猫精灵在线语音模组的接入、配置与调试说明。
+    天猫精灵在线语音模组的接入、配置与调试说明。
 - [离在线语音 AI 大模型模组 · JX-A7T](offline-online-ai-jxa7t/jx-a7t.md)  
-  JX-A7T 模组的功能特性、开发流程与示例工程。
+    JX-A7T 模组的功能特性、开发流程与示例工程。
 - [小程序平台操作指南](miniapp-guide/miniapp-guide.md)  
-  智能公元小程序平台入口、项目管理与调试步骤。
+    智能公元小程序平台入口、项目管理与调试步骤。
 - [产品结构设计指南](product-design-guide/design-guide.md)  
-  声学结构、喇叭与麦克风选型等产品设计建议。
+    声学结构、喇叭与麦克风选型等产品设计建议。
 - [智能公元平台开发案例](platform-cases/platform-cases.md)  
-  典型项目案例与端到端解决方案归档。
+    典型项目案例与端到端解决方案归档。
 - [智能体](ai-agents/ai-agent.md)  
-  数字人 / 智能体相关概念与使用方式总览。
+    数字人 / 智能体相关概念与使用方式总览。
 - [常见问题](faq/faq.md)  
-  烧录、联网、语音识别等常见问题的集中解答。
+    烧录、联网、语音识别等常见问题的集中解答。
 - [教程和示例固件](tutorials-examples/tutorials.md)  
-  官方示例工程、演示固件与上手教程合集。
+    官方示例工程、演示固件与上手教程合集。
 - [开源仓库](open-source/open-source.md)  
-  与智能公元相关的开源 SDK、工具与示例代码链接。
+    与智能公元相关的开源 SDK、工具与示例代码链接。
 
 </div>
 
@@ -49,17 +49,17 @@ description: 智能公元平台在不同模组、平台入口以及工具链上�
 <div class="grid cards" markdown>
 
 - [WiFi 模组 · JX-12F](wifi-jx12f/jx-12f.md)  
-  JX-12F WiFi 模组的引脚说明、AT 指令与应用示例。
+    JX-12F WiFi 模组的引脚说明、AT 指令与应用示例。
 - [WiFi 模组 · BL-62B](wifi-bl62b/bl-62b.md)  
-  BL-62B WiFi 模组的基本资料、配置步骤与调试要点。
+    BL-62B WiFi 模组的基本资料、配置步骤与调试要点。
 - [WiFi 图像模组 · XR-50A](wifi-image-xr50a/xr-50a.md)  
-  XR-50A 图像模组的硬件连接、图像采集与传输配置。
+    XR-50A 图像模组的硬件连接、图像采集与传输配置。
 - [离线语音模组 · CI 系列](offline-voice-ci03t/ci-03t.md) — 包含 CI-03T、CI-33T、CI-73T、CI-95C、CI-96Z 等目录  
-  CI 系列各型号离线语音模组的统一入口与资料索引。
+    CI 系列各型号离线语音模组的统一入口与资料索引。
 - [离线语音模组 · SU 系列](offline-voice-su03t/su-03t.md) — 包含 SU-03T、SU-10A、SU-11T、SU-13T、SU-20T、SU-21T、SU-22T、SU-23T、SU-30T-31T、SU-32T、SU-63T 等目录  
-  SU 系列各型号离线语音模组的统一入口与资料索引。
+    SU 系列各型号离线语音模组的统一入口与资料索引。
 - [离线语音模组 · JX-B5C](offline-voice-jxb5c/jx-b5c.md)  
-  JX-B5C 离线语音模组的硬件资料、固件与开发指南。
+    JX-B5C 离线语音模组的硬件资料、固件与开发指南。
 
 </div>
 
@@ -68,9 +68,9 @@ description: 智能公元平台在不同模组、平台入口以及工具链上�
 <div class="grid cards" markdown>
 
 - [模块性能与选型](module-performance/module-selection.md)  
-  对比各模组关键指标，为项目选型提供参考。
+    对比各模组关键指标，为项目选型提供参考。
 - [芯片手册](chip/chip.md)  
-  核心芯片的规格书、寄存器说明等原始技术资料。
+    核心芯片的规格书、寄存器说明等原始技术资料。
 
 </div>
 
