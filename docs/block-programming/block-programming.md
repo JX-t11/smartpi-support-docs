@@ -1,3 +1,9 @@
+---
+title: Block 积木编程
+icon: material/puzzle
+description: CI-03T/CI-33T 离线语音模组搭配米思奇（Mixly）图形化编程开发指南
+---
+
 # CI-03T/CI-33T 搭配米思奇图形化编程
 
 CI-03T/CI-33T 离线语音模组支持使用米思奇（Mixly）进行图形化编程开发，无需编写 C 代码即可实现语音控制、串口通信等功能。
