@@ -121,6 +121,7 @@ nav:
       - GPIO电平翻转时间控制: platform-configuration/gpio-timing-control.md
       - 串口输入参数配置: platform-configuration/uart-input-parameter.md
       - 变量控制配置: platform-configuration/variable-control-setup.md
+      - 小程序平台操作指南: miniapp-guide/miniapp-guide.md
     - 各模块配置参数:
       - SU系列:
         - SU-03T: platform-configuration/firmware-config-su03t.md
@@ -146,10 +147,10 @@ nav:
       - WiFi模组:
         - XR-50A: platform-configuration/firmware-config-xr50a.md
         - BL-62B: platform-configuration/firmware-config-bl62b.md
-    - 智能体平台:
-      - 智能体: ai-agents/ai-agent.md
-      - 智能体控制台指南: ai-agents/platform-guide.md
-    - 小程序平台操作指南: miniapp-guide/miniapp-guide.md
+  - 智能体开发平台:
+    - 智能体: ai-agents/ai-agent.md
+    - 智能体控制台指南: ai-agents/platform-guide.md
+
   - 开发指南:
     - 开发入门:
       - Block积木编程: block-programming/block-programming.md
