@@ -32,7 +32,7 @@ theme:
     - navigation.tabs
     - navigation.tabs.sticky
     - navigation.sections
-    # - navigation.expand # 会自动展开当前页面所在的分支
+    - navigation.expand # 会自动展开当前页面所在的分支
     - navigation.path
     - navigation.indexes
     - navigation.top
@@ -111,11 +111,57 @@ markdown_extensions:
 
 nav:
   - 首页: index.md
-  - 平台使用教程: 
+  - 平台使用教程:
+    - 智能公元平台:
+      - 固件配置全流程: platform-configuration/firmware-config-workflow.md
+      - 版本配置参数详解: platform-configuration/firmware-config-parameters.md
+      - 命令执行条件控制: platform-configuration/command-execution-control.md
+      - 自定义命令词变量配置: platform-configuration/custom-command-variable.md
+      - 设备行为ID配置: platform-configuration/device-behavior-id.md
+      - GPIO电平翻转时间控制: platform-configuration/gpio-timing-control.md
+      - 串口输入参数配置: platform-configuration/uart-input-parameter.md
+      - 变量控制配置: platform-configuration/variable-control-setup.md
+    - 各模块配置参数:
+      - SU系列:
+        - SU-03T: platform-configuration/firmware-config-su03t.md
+        - SU-10A: platform-configuration/firmware-config-su10a.md
+        - SU-11T: platform-configuration/firmware-config-su11t.md
+        - SU-13T: platform-configuration/firmware-config-su13t.md
+        - SU-20T: platform-configuration/firmware-config-su20t.md
+        - SU-21T: platform-configuration/firmware-config-su21t.md
+        - SU-22T: platform-configuration/firmware-config-su22t.md
+        - SU-23T: platform-configuration/firmware-config-su23t.md
+        - SU-30T-31T: platform-configuration/firmware-config-su30t31t.md
+        - SU-32T: platform-configuration/firmware-config-su32t.md
+        - SU-63T: platform-configuration/firmware-config-su63t.md
+      - CI系列:
+        - CI-03T: platform-configuration/firmware-config-ci03t.md
+        - CI-33T: platform-configuration/firmware-config-ci33t.md
+        - CI-73T: platform-configuration/firmware-config-ci73t.md
+        - CI-95C: platform-configuration/firmware-config-ci95c.md
+        - CI-96Z: platform-configuration/firmware-config-ci96z.md
+      - JX系列:
+        - JX-A7T: platform-configuration/firmware-config-jxa7t.md
+        - JX-12F: platform-configuration/firmware-config-jx12f.md
+      - WiFi模组:
+        - XR-50A: platform-configuration/firmware-config-xr50a.md
+        - BL-62B: platform-configuration/firmware-config-bl62b.md
     - 智能体平台:
       - 智能体: ai-agents/ai-agent.md
       - 智能体控制台指南: ai-agents/platform-guide.md
     - 小程序平台操作指南: miniapp-guide/miniapp-guide.md
+  - 开发指南:
+    - 开发入门:
+      - Block积木编程: block-programming/block-programming.md
+      - 教程和示例固件: tutorials-examples/tutorials.md
+    - 实战与案例:
+      - 智能公元平台开发案例: platform-cases/platform-cases.md
+    - 设计与选型:
+      - 产品结构设计指南: product-design-guide/design-guide.md
+      - 模块性能与选型: module-performance/module-selection.md
+    - 扩展与开源:
+      - 开源仓库: open-source/open-source.md
+    - 芯片手册: chip/chip.md
   - 模组资料:
     - 离线语音模组:
       - SU系列:
@@ -146,27 +192,148 @@ nav:
       - WiFi模组 JX-12F: wifi-jx12f/jx-12f.md
     - 在线语音模组:
       - 天猫精灵: online-voice-tmall/tmall-genie.md
-  - 开发指南:
-    - 开发入门:
-      - Block积木编程: block-programming/block-programming.md
-      - 教程和示例固件: tutorials-examples/tutorials.md
-    - 实战与案例:
-      - 智能公元平台开发案例: platform-cases/platform-cases.md
-    - 设计与选型:
-      - 产品结构设计指南: product-design-guide/design-guide.md
-      - 模块性能与选型: module-performance/module-selection.md
-    - 扩展与开源:
-      - 开源仓库: open-source/open-source.md
-    - 芯片手册: chip/chip.md
   - 常见问题: 
     - 常见问题: faq/faq.md
-    - 应用场景与项目: faq/application_scenarios.md
-    - 平台与固件: faq/platform_and_firmware.md
-    - 烧录与调试: faq/burning_and_debug.md
+  - 烧录与调试:
+    - FAQ: faq-burning-and-debug/burning_and_debug.md
+    - SU-03T: faq-burning-and-debug/faq-burning-and-debug-su-03t.md
+    - SU-10A: faq-burning-and-debug/faq-burning-and-debug-su-10a.md
+    - SU-11T: faq-burning-and-debug/faq-burning-and-debug-su-11t.md
+    - SU-13T: faq-burning-and-debug/faq-burning-and-debug-su-13t.md
+    - SU-20T: faq-burning-and-debug/faq-burning-and-debug-su-20t.md
+    - SU-21T: faq-burning-and-debug/faq-burning-and-debug-su-21t.md
+    - SU-22T: faq-burning-and-debug/faq-burning-and-debug-su-22t.md
+    - SU-23T: faq-burning-and-debug/faq-burning-and-debug-su-23t.md
+    - SU-30T-31T: faq-burning-and-debug/faq-burning-and-debug-su-30t-31t.md
+    - SU-32T: faq-burning-and-debug/faq-burning-and-debug-su-32t.md
+    - SU-63T: faq-burning-and-debug/faq-burning-and-debug-su-63t.md
+    - CI-03T: faq-burning-and-debug/faq-burning-and-debug-ci-03t.md
+    - CI-33T: faq-burning-and-debug/faq-burning-and-debug-ci-33t.md
+    - CI-73T: faq-burning-and-debug/faq-burning-and-debug-ci-73t.md
+    - CI-95C: faq-burning-and-debug/faq-burning-and-debug-ci-95c.md
+    - CI-96Z: faq-burning-and-debug/faq-burning-and-debug-ci-96z.md
+    - JX-B5C: faq-burning-and-debug/faq-burning-and-debug-jx-b5c.md
+    - JX-A7T: faq-burning-and-debug/faq-burning-and-debug-jx-a7t.md
+    - XR-50A: faq-burning-and-debug/faq-burning-and-debug-xr-50a.md
+    - BL-62B: faq-burning-and-debug/faq-burning-and-debug-bl-62b.md
+    - JX-12F: faq-burning-and-debug/faq-burning-and-debug-jx-12f.md
+  - 应用开发案例:
+    - FAQ: faq-application-scenarios/application_scenarios.md
+    - SU-03T: faq-application-scenarios/faq-application-scenarios-su-03t.md
+    - SU-10A: faq-application-scenarios/faq-application-scenarios-su-10a.md
+    - SU-11T: faq-application-scenarios/faq-application-scenarios-su-11t.md
+    - SU-13T: faq-application-scenarios/faq-application-scenarios-su-13t.md
+    - SU-20T: faq-application-scenarios/faq-application-scenarios-su-20t.md
+    - SU-21T: faq-application-scenarios/faq-application-scenarios-su-21t.md
+    - SU-22T: faq-application-scenarios/faq-application-scenarios-su-22t.md
+    - SU-23T: faq-application-scenarios/faq-application-scenarios-su-23t.md
+    - SU-30T-31T: faq-application-scenarios/faq-application-scenarios-su-30t-31t.md
+    - SU-32T: faq-application-scenarios/faq-application-scenarios-su-32t.md
+    - SU-63T: faq-application-scenarios/faq-application-scenarios-su-63t.md
+    - CI-03T: faq-application-scenarios/faq-application-scenarios-ci-03t.md
+    - CI-33T: faq-application-scenarios/faq-application-scenarios-ci-33t.md
+    - CI-73T: faq-application-scenarios/faq-application-scenarios-ci-73t.md
+    - CI-95C: faq-application-scenarios/faq-application-scenarios-ci-95c.md
+    - CI-96Z: faq-application-scenarios/faq-application-scenarios-ci-96z.md
+    - JX-B5C: faq-application-scenarios/faq-application-scenarios-jx-b5c.md
+    - JX-A7T: faq-application-scenarios/faq-application-scenarios-jx-a7t.md
+    - XR-50A: faq-application-scenarios/faq-application-scenarios-xr-50a.md
+    - BL-62B: faq-application-scenarios/faq-application-scenarios-bl-62b.md
+    - JX-12F: faq-application-scenarios/faq-application-scenarios-jx-12f.md
+  - 平台与固件:
+    - FAQ: faq-platform-and-firmware/platform_and_firmware.md
+    - SU-03T: faq-platform-and-firmware/faq-platform-and-firmware-su-03t.md
+    - SU-10A: faq-platform-and-firmware/faq-platform-and-firmware-su-10a.md
+    - SU-11T: faq-platform-and-firmware/faq-platform-and-firmware-su-11t.md
+    - SU-13T: faq-platform-and-firmware/faq-platform-and-firmware-su-13t.md
+    - SU-20T: faq-platform-and-firmware/faq-platform-and-firmware-su-20t.md
+    - SU-21T: faq-platform-and-firmware/faq-platform-and-firmware-su-21t.md
+    - SU-22T: faq-platform-and-firmware/faq-platform-and-firmware-su-22t.md
+    - SU-23T: faq-platform-and-firmware/faq-platform-and-firmware-su-23t.md
+    - SU-30T-31T: faq-platform-and-firmware/faq-platform-and-firmware-su-30t-31t.md
+    - SU-32T: faq-platform-and-firmware/faq-platform-and-firmware-su-32t.md
+    - SU-63T: faq-platform-and-firmware/faq-platform-and-firmware-su-63t.md
+    - CI-03T: faq-platform-and-firmware/faq-platform-and-firmware-ci-03t.md
+    - CI-33T: faq-platform-and-firmware/faq-platform-and-firmware-ci-33t.md
+    - CI-73T: faq-platform-and-firmware/faq-platform-and-firmware-ci-73t.md
+    - CI-95C: faq-platform-and-firmware/faq-platform-and-firmware-ci-95c.md
+    - CI-96Z: faq-platform-and-firmware/faq-platform-and-firmware-ci-96z.md
+    - JX-B5C: faq-platform-and-firmware/faq-platform-and-firmware-jx-b5c.md
+    - JX-A7T: faq-platform-and-firmware/faq-platform-and-firmware-jx-a7t.md
+    - XR-50A: faq-platform-and-firmware/faq-platform-and-firmware-xr-50a.md
+    - BL-62B: faq-platform-and-firmware/faq-platform-and-firmware-bl-62b.md
+    - JX-12F: faq-platform-and-firmware/faq-platform-and-firmware-jx-12f.md
     # - 商务与交付: faq/business_and_delivery.md
-    - 语音调优: faq/voice_tuning.md
-    - 硬件设计: faq/hardware_design.md
-    - 模块选型: faq/module_selection.md
+  - 语音调优:
+    - FAQ: faq-voice-tuning/voice_tuning.md
+    - US513U61: faq-voice-tuning/faq-voice-tuning-us513u61.md
+    - SU-03T: faq-voice-tuning/faq-voice-tuning-su-03t.md
+    - SU-10A: faq-voice-tuning/faq-voice-tuning-su-10a.md
+    - SU-11T: faq-voice-tuning/faq-voice-tuning-su-11t.md
+    - SU-13T: faq-voice-tuning/faq-voice-tuning-su-13t.md
+    - SU-20T: faq-voice-tuning/faq-voice-tuning-su-20t.md
+    - SU-21T: faq-voice-tuning/faq-voice-tuning-su-21t.md
+    - SU-22T: faq-voice-tuning/faq-voice-tuning-su-22t.md
+    - SU-23T: faq-voice-tuning/faq-voice-tuning-su-23t.md
+    - SU-30T-31T: faq-voice-tuning/faq-voice-tuning-su-30t-31t.md
+    - SU-32T: faq-voice-tuning/faq-voice-tuning-su-32t.md
+    - SU-63T: faq-voice-tuning/faq-voice-tuning-su-63t.md
+    - CI-03T: faq-voice-tuning/faq-voice-tuning-ci-03t.md
+    - CI-33T: faq-voice-tuning/faq-voice-tuning-ci-33t.md
+    - CI-73T: faq-voice-tuning/faq-voice-tuning-ci-73t.md
+    - CI-95C: faq-voice-tuning/faq-voice-tuning-ci-95c.md
+    - CI-96Z: faq-voice-tuning/faq-voice-tuning-ci-96z.md
+    - JX-B5C: faq-voice-tuning/faq-voice-tuning-jx-b5c.md
+    - JX-A7T: faq-voice-tuning/faq-voice-tuning-jx-a7t.md
+    - XR-50A: faq-voice-tuning/faq-voice-tuning-xr-50a.md
+    - BL-62B: faq-voice-tuning/faq-voice-tuning-bl-62b.md
+    - JX-12F: faq-voice-tuning/faq-voice-tuning-jx-12f.md
+  - 硬件设计:
+    - FAQ: faq-hardware-design/hardware_design.md
+    - SU-03T: faq-hardware-design/faq-hardware-design-su-03t.md
+    - SU-10A: faq-hardware-design/faq-hardware-design-su-10a.md
+    - SU-11T: faq-hardware-design/faq-hardware-design-su-11t.md
+    - SU-13T: faq-hardware-design/faq-hardware-design-su-13t.md
+    - SU-20T: faq-hardware-design/faq-hardware-design-su-20t.md
+    - SU-21T: faq-hardware-design/faq-hardware-design-su-21t.md
+    - SU-22T: faq-hardware-design/faq-hardware-design-su-22t.md
+    - SU-23T: faq-hardware-design/faq-hardware-design-su-23t.md
+    - SU-30T-31T: faq-hardware-design/faq-hardware-design-su-30t-31t.md
+    - SU-32T: faq-hardware-design/faq-hardware-design-su-32t.md
+    - SU-63T: faq-hardware-design/faq-hardware-design-su-63t.md
+    - CI-03T: faq-hardware-design/faq-hardware-design-ci-03t.md
+    - CI-33T: faq-hardware-design/faq-hardware-design-ci-33t.md
+    - CI-73T: faq-hardware-design/faq-hardware-design-ci-73t.md
+    - CI-95C: faq-hardware-design/faq-hardware-design-ci-95c.md
+    - CI-96Z: faq-hardware-design/faq-hardware-design-ci-96z.md
+    - JX-B5C: faq-hardware-design/faq-hardware-design-jx-b5c.md
+    - JX-A7T: faq-hardware-design/faq-hardware-design-jx-a7t.md
+    - XR-50A: faq-hardware-design/faq-hardware-design-xr-50a.md
+    - BL-62B: faq-hardware-design/faq-hardware-design-bl-62b.md
+    - JX-12F: faq-hardware-design/faq-hardware-design-jx-12f.md
+  - 模块选型:
+    - FAQ: faq-module-selection/module_selection.md
+    - SU-03T: faq-module-selection/faq-module-selection-su-03t.md
+    - SU-10A: faq-module-selection/faq-module-selection-su-10a.md
+    - SU-11T: faq-module-selection/faq-module-selection-su-11t.md
+    - SU-13T: faq-module-selection/faq-module-selection-su-13t.md
+    - SU-20T: faq-module-selection/faq-module-selection-su-20t.md
+    - SU-21T: faq-module-selection/faq-module-selection-su-21t.md
+    - SU-22T: faq-module-selection/faq-module-selection-su-22t.md
+    - SU-23T: faq-module-selection/faq-module-selection-su-23t.md
+    - SU-30T-31T: faq-module-selection/faq-module-selection-su-30t-31t.md
+    - SU-32T: faq-module-selection/faq-module-selection-su-32t.md
+    - SU-63T: faq-module-selection/faq-module-selection-su-63t.md
+    - CI-03T: faq-module-selection/faq-module-selection-ci-03t.md
+    - CI-33T: faq-module-selection/faq-module-selection-ci-33t.md
+    - CI-73T: faq-module-selection/faq-module-selection-ci-73t.md
+    - CI-95C: faq-module-selection/faq-module-selection-ci-95c.md
+    - CI-96Z: faq-module-selection/faq-module-selection-ci-96z.md
+    - JX-B5C: faq-module-selection/faq-module-selection-jx-b5c.md
+    - JX-A7T: faq-module-selection/faq-module-selection-jx-a7t.md
+    - XR-50A: faq-module-selection/faq-module-selection-xr-50a.md
+    - BL-62B: faq-module-selection/faq-module-selection-bl-62b.md
+    - JX-12F: faq-module-selection/faq-module-selection-jx-12f.md
   - 免责声明: disclaimer.md
 
 extra:

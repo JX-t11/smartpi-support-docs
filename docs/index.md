@@ -37,10 +37,25 @@ description: 智能公元平台在不同模组、平台入口以及工具链上�
     数字人 / 智能体相关概念与使用方式总览。
 - [常见问题](faq/faq.md)  
     烧录、联网、语音识别等常见问题的集中解答。
-- [教程和示例固件](tutorials-examples/tutorials.md)  
+- [教程和示例固件](tutorials-examples/tutorials.md)
     官方示例工程、演示固件与上手教程合集。
-- [开源仓库](open-source/open-source.md)  
+- [开源仓库](open-source/open-source.md)
     与智能公元相关的开源 SDK、工具与示例代码链接。
+
+## 学习资源
+
+### 官方文档与教程
+
+- **智能公元文档中心**：[文档中心](https://help.aimachip.com/)
+    - 官方技术文档中心，包含各模组详细资料
+    - 提供开发指南、API文档和示例代码
+    - 支持在线搜索和分类浏览
+
+- **B站教程频道**：[机芯智能官方B站账号](https://space.bilibili.com/1903518159)
+    - 机芯智能官方B站账号
+    - 包含开发环境搭建指导
+    - 提供实际操作演示和教程视频
+    - 定期更新新功能和使用技巧
 
 </div>
 
@@ -54,10 +69,10 @@ description: 智能公元平台在不同模组、平台入口以及工具链上�
     BL-62B WiFi 模组的基本资料、配置步骤与调试要点。
 - [WiFi 图像模组 · XR-50A](wifi-image-xr50a/xr-50a.md)  
     XR-50A 图像模组的硬件连接、图像采集与传输配置。
-- [离线语音模组 · CI 系列](offline-voice-ci03t/ci-03t.md) — 包含 CI-03T、CI-33T、CI-73T、CI-95C、CI-96Z 等目录  
-    CI 系列各型号离线语音模组的统一入口与资料索引。
-- [离线语音模组 · SU 系列](offline-voice-su03t/su-03t.md) — 包含 SU-03T、SU-10A、SU-11T、SU-13T、SU-20T、SU-21T、SU-22T、SU-23T、SU-30T-31T、SU-32T、SU-63T 等目录  
-    SU 系列各型号离线语音模组的统一入口与资料索引。
+- [离线语音模组 · CI 系列](offline-voice-ci03t/ci-03t.md) 
+    包含 CI-03T、CI-33T、CI-73T、CI-95C、CI-96Z 等型号, CI 系列各型号离线语音模组的统一入口与资料索引。
+- [离线语音模组 · SU 系列](offline-voice-su03t/su-03t.md) 
+    包含 SU-03T、SU-10A、SU-11T、SU-13T、SU-20T、SU-21T、SU-22T、SU-23T、SU-30T-31T、SU-32T、SU-63T 等型号,SU 系列各型号离线语音模组的统一入口与资料索引。
 - [离线语音模组 · JX-B5C](offline-voice-jxb5c/jx-b5c.md)  
     JX-B5C 离线语音模组的硬件资料、固件与开发指南。
 

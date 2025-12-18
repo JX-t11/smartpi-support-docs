@@ -291,8 +291,8 @@ void smooth_servo_control() {
 
 ### 舵机延时恢复demo
 
-**配置文件**：[舵机延时恢复demo__01.json](../offline-voice-su32t/img/860265e7.jpg)
-**固件包**：[jx_firm(50).zip](../offline-voice-su32t/img/860265e7.jpg)
+**配置文件**：[舵机延时恢复demo__01.json](./img/860265e7.jpg)
+**固件包**：[jx_firm(50).zip](./img/860265e7.jpg)
 
 **使用说明：**
 
