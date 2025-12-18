@@ -23,6 +23,7 @@ description: 高性能双麦抗噪离线语音模组 SU-32T 完整开发指南�
 ### SU-32T 定位
 
 > SU-32T 是 **高性能双麦抗噪离线语音模组**：
+
 > - **架构**：DSP+NPU+CPU 异步架构，DSP性能是HiFi4的两倍
 > - **特点**：高性能双麦抗噪、更好的降噪、增强、BF等功能
 > - **适用场景**：智能家居、智能小家电、86盒、玩具、灯具、工业、医疗、物联网、汽车、安防
@@ -147,32 +148,21 @@ SU-32T 离线双麦语音核心模块是针对大量纯离线控制场景和产�
 - 联动应用：与 WiFi 模组结合，实现语音+云端控制。
 - IR控制：支持 IR 输入/输出控制红外设备。
 
----
+### 常见问题
 
-### 无多余IO口时如何与单片机通信？
+已将本页的常见问题与应用案例整理到独立文档：
 
-**问题描述：**
-
-使用 SU-32T 作为主控芯片时，已占用 UART1 和 UART3 分别连接屏幕和护理床，没有多余的串口和 IO 口与单片机通信。
-
-**解决方案：**
-
-- **高低电平应答方案**：在没有多余 IO 口的情况下，可使用高低电平信号作为简单的应答机制
-- **串口共用方案**：通过制定不同的指令内容作为区分，尝试共用串口（需注意可能会造成信息紊乱）
-
-**注意事项：**
-
-- 串口共用已被研发验证不可行，会导致信息紊乱，不建议使用
-- SU-32T 最多支持 3 路 UART，规划通信时需合理分配资源
-- 对于简单的控制需求，高低电平应答是可行的替代方案
-
----
+- [SU-32T 平台与固件 FAQ](../faq-platform-and-firmware/faq-platform-and-firmware-su-32t.md)
+- [SU-32T 烧录与调试 FAQ](../faq-burning-and-debug/faq-burning-and-debug-su-32t.md)
+- [SU-32T 硬件设计 FAQ](../faq-hardware-design/faq-hardware-design-su-32t.md)
+- [SU-32T 语音调优 FAQ](../faq-voice-tuning/faq-voice-tuning-su-32t.md)
+- [SU-32T 模块选型 FAQ](../faq-module-selection/faq-module-selection-su-32t.md)
+- [SU-32T 应用场景与项目 FAQ](../faq-application-scenarios/faq-application-scenarios-su-32t.md)
 
 ## 参考链接
 
 | 资源 | 链接 |
 |------|------|
-| SU-32T 官方文档首页 | [https://help.aimachip.com/docs/offline_su32t](https://help.aimachip.com/docs/offline_su32t) |
-| 蜂鸟芯片资料 | [http://help.aimachip.com/docs/chip/chip-1e9c8qlkoou22](http://help.aimachip.com/docs/chip/chip-1e9c8qlkoou22) |
+| SU-32T 官方文档首页 | [查看](https://help.aimachip.com/docs/offline_su32t) |
+| 霜鸟芯片资料 | [查看](http://help.aimachip.com/docs/chip/chip-1e9c8qlkoou22) |
 | 智能公元平台 | [https://smartpi.cn](https://smartpi.cn) |
-| SU-30T/31T 文档（参考） | [https://help.aimachip.com/docs/offline_su30t](https://help.aimachip.com/docs/offline_su30t) |

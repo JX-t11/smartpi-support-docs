@@ -22,6 +22,7 @@ description: 蓝牙双模智能语音 IoT 模组 SU-63T 完整开发指南，支
 ### SU-63T 定位
 
 > SU-63T 是 **蓝牙双模智能语音 IoT 模组**：
+
 > - **特点**：蓝牙双模 + 离线语音识别，Turnkey 方案
 > - **蓝牙**：支持 BLE 5.1、A2DP、HFP、SPP 等协议
 > - **适用场景**：智能家电、智能家居、智能玩具、无线音视频、工业控制、医疗监护
@@ -45,7 +46,7 @@ description: 蓝牙双模智能语音 IoT 模组 SU-63T 完整开发指南，支
 
 ## 模组概述
 
-SU-63T 是一款蓝牙双模智能语音 IoT 模组。芯片集成 32 位 CPU 处理器，包含 UART、GPIO、SPI、I2C、ADC、功放等外围接口；内置 NPU、浮点运算单元。依托在语音识别技术上的积累和算法的不断优化和创新，将本地识别算法与芯片架构深度融合，为客户提供 Turnkey 语音识别方案。
+SU-63T 是一款蓝牙双模智能语音 IoT 模组。芯片集成 32 位 CPU 处理器，包含 UART、GPIO、SPI、I2C、ADC、功放等外围接口；内置 NPU、浮点运算单元。依托在语音识别技术上的积累和算法的不断优化和创新，将本地识别算法与芯片架构深度融合，提供 Turnkey 语音识别方案。
 
 该模组采用 MCU 加语音识别专用 NPU 架构内核，同时芯片内置 SRAM 和 FLASH，只需少量外围器件即可形成完整解决方案。该方案支持 50 条本地指令离线 3-5 米远场识别，支持 RTOS 轻量级系统，并提供简洁友好的客制化工具，可快速部署到不同的终端产品上。
 
@@ -206,33 +207,14 @@ SU-63T 是一款蓝牙双模智能语音 IoT 模组。芯片集成 32 位 CPU �
 
 ## 常见问题
 
-### SU-63T模块支持哪些烧录方式？
+已将本页常见问题整理到独立文档：
 
-SU-63T模块支持多种烧录方式：
-
-- **专业烧录工具**：使用官方USB烧录器进行烧录
-- **串口工具**：可通过串口工具进行固件烧录
-
-**注意事项：**
-
-- 烧录时需要配合专用的烧录工具和软件
-
-![SU-63T烧录工具](./img/67666af7.jpg)
-
-### 购买模块时应该选择哪种版本？
-
-如果用户已有咪头和喇叭，建议购买**已焊接排针**的模块版本，这样可以直接使用，无需额外焊接。
-
----
-
-## 开发支持
-
-提供完整的 SDK 和开发工具：
-
-- 基于 RTOS 的软件开发套件
-- 语音识别客制化工具
-- 详细的开发文档和示例代码
-- 技术支持和应用指导
+- [SU-63T 平台与固件 FAQ](../faq-platform-and-firmware/faq-platform-and-firmware-su-63t.md)
+- [SU-63T 烧录与调试 FAQ](../faq-burning-and-debug/faq-burning-and-debug-su-63t.md)
+- [SU-63T 硬件设计 FAQ](../faq-hardware-design/faq-hardware-design-su-63t.md)
+- [SU-63T 语音调优 FAQ](../faq-voice-tuning/faq-voice-tuning-su-63t.md)
+- [SU-63T 模块选型 FAQ](../faq-module-selection/faq-module-selection-su-63t.md)
+- [SU-63T 应用场景与项目 FAQ](../faq-application-scenarios/faq-application-scenarios-su-63t.md)
 
 ---
 

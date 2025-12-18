@@ -14,7 +14,7 @@ description: 高性能神经网络离线语音模组 CI-73T 完整开发指南�
 | 综合识别率 | 95% | 95% |
 | 供电电压 | 3.6-5.5V | 3.6-5.5V |
 | 词条数 | 100 | 100 |
-| Flash | 1M | 1M |
+| Flash | 1M (CI-73T1) | 2M (CI-73T2) |
 | SRAM | 288KB | 288KB |
 | AEC（回声消除） | ✗ | ✓ |
 | 双麦算法 | ✗ | ✓ |
@@ -43,6 +43,7 @@ description: 高性能神经网络离线语音模组 CI-73T 完整开发指南�
 ### CI-73T 定位
 
 > CI-73T 是 **性价比之选**，相比 CI-03T/CI-33T：
+
 > - **优势**：成本更低，适合对词条数要求不高的场景
 > - **限制**：词条数 100（vs CI-03T 的 300、CI-33T 的 500）
 > - **特点**：采用 BNPU V3.5，支持 CNN 神经网络
@@ -160,6 +161,66 @@ CI-73T 是我司研发的新一代高性能神经网络智能语音模组，集�
 
 ---
 
+### CI-73T有哪些教程资源？
+
+**问题描述：**
+
+需要获取CI-73T模块的相关教程，包括开发包、烧录教程等学习资料。
+
+**解决方案：**
+
+**官方教程资源：**
+
+1. **开发包下载**：
+
+    - 最新版本开发包 V2.1.0
+    - 下载地址：[CI-73T开发包](https://help.aimachip.com/docs/ci73t/ci73t-1ga9ln8gktcu1)
+    - 包含：SDK、示例代码、配置工具
+
+2. **烧录教程**：
+
+    - 视频教程：[CI-73T烧录教程](https://www.bilibili.com/video/BV1fPUmYxENX/)
+    - 内容涵盖：烧录工具使用、固件下载、调试方法
+    - 适合初学者快速上手
+
+3. **官方文档**：
+
+    - 首页链接：[CI-73T官方文档](https://help.aimachip.com/docs/ci73t)
+    - 包含：规格书、原理图、应用笔记
+
+**学习路径建议：**
+
+1. **入门阶段**：
+
+    - 阅读规格书了解硬件参数
+    - 观看烧录教程熟悉开发流程
+    - 下载开发包并运行示例
+
+2. **进阶学习**：
+
+    - 学习智能公元平台使用
+    - 掌握词表配置方法
+    - 实践自定义功能开发
+
+3. **实战项目**：
+
+    - 从简单控制项目开始
+    - 逐步添加复杂功能
+    - 参考示例代码学习
+
+**其他资源：**
+
+- 技术支持群：加入官方技术交流群
+- 社区论坛：查看他人项目经验
+- 在线客服：工作时间实时答疑
+
+**注意事项：**
+
+- 开发包需要使用最新版本，确保兼容性
+- 烧录前请先安装CH340驱动
+- 遇到问题优先查看官方文档和FAQ
+- 保留学习笔记，便于后续查阅
+
 ## 固件烧录指南
 
 ### 烧录步骤
@@ -226,5 +287,6 @@ void on_voice_command(int cmd_id) {
 |------|------|
 | CI-73T 官方文档首页 | [https://help.aimachip.com/docs/ci73t](https://help.aimachip.com/docs/ci73t) |
 | 智能公元平台 | [https://smartpi.cn](https://smartpi.cn) |
+| 平台入门视频 | [观看](https://www.bilibili.com/video/BV1e8411T77q/?spm_id_from=333.999.0.0) |
 | CI-03T 文档（参考） | [https://help.aimachip.com/docs/offline_ci03t](https://help.aimachip.com/docs/offline_ci03t) |
 | CI-33T 文档（参考） | [https://help.aimachip.com/docs/offline_ci33t](https://help.aimachip.com/docs/offline_ci33t) |
