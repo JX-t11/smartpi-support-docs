@@ -328,6 +328,22 @@ int extract_number_from_command(String cmd) {
 - **资源管理**：不用的定时器及时停止释放资源
 - **异常处理**：定时器异常时应有降级方案
 
+**重要：周期性任务的正确配置位置**
+
+如果需要实现周期性执行的任务（如每隔50ms发送一个命令），需要将执行动作放在"定时器超时"触发事件中，而不是定时器初始化部分：
+
+```正确做法：
+1. 在定时器标签页创建定时器（如 timer_50ms），设置超时时间50ms，选择"重复触发"模式
+2. 添加一个触发事件，触发方式选择"定时器超时"，关联刚创建的定时器
+3. 在该触发事件的控制详情中，添加需要周期执行的动作（如串口发送）
+4. 通过语音命令或其他事件启动定时器
+```
+
+```错误做法：
+× 将串口发送动作直接放在定时器初始化或启动命令中
+× 在语音命令中添加循环逻辑
+```
+
 ![GPIO延时配置界面](./img/platform-configuration/gpio-delay-config.png)
 ![定时器列表](./img/platform-configuration/timer-list.png)
 ![变量定义](./img/platform-configuration/variable-definition.png)
