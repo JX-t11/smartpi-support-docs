@@ -148,8 +148,11 @@ nav:
         - XR-50A: platform-configuration/firmware-config-xr50a.md
         - BL-62B: platform-configuration/firmware-config-bl62b.md
   - 智能体开发平台:
+    - 快速开始: ai-agents/get-started.md
     - 智能体: ai-agents/ai-agent.md
+    - 知识库配置指南: ai-agents/knowledge-base-setup.md
     - 智能体控制台指南: ai-agents/platform-guide.md
+    - 实践教程: ai-agents/tutorial.md
 
   - 开发指南:
     - 开发入门:
