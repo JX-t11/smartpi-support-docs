@@ -1,5 +1,5 @@
 # Zensical (新)
-zensical==0.0.10
+zensical==0.0.15
 
 # MkDocs (备用回退)
 # mkdocs>=1.5.0
