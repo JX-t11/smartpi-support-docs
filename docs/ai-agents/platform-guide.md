@@ -1,13 +1,160 @@
 ---
-title: 智能体平台操作指南
+title: 智能体控制台指南
 icon: material/cog
-description: 智能体平台操作指南，包含 API 接入、MCP 与 Coze 插件配置
+description: 基于 智能体平台的控制台操作指南，包含发布 API、鉴权、调用、MCP 与插件配置
 ---
-# 智能体平台操作指南
+# 智能体控制台指南
 
-本文整合了智能公元平台对智能体开放的三类接入 API，以及配套的设备控制能力（MCP 与 coze 插件）。文档按照“整体概览 → API 详情 → 工具拓展”的顺序组织，便于快速定位所需信息。
+智能体平台已切换为 **智能体平台**。本页按“照着做就能用”的方式，说明：
 
-## 1. 接入概览
+- 如何在控制台创建/发布智能体
+- 如何获取 **PAT（Personal Access Token）**
+- 如何用 OpenAPI 调用智能体/工作流
+- 如何与智能公元平台对接（生成二维码并绑定设备）
+- 如何让智能体具备设备控制能力（MCP/插件）
+
+如果你是第一次使用，建议先从：[快速开始](./get-started.md) 开始。
+
+---
+
+## 1. 新平台：最短路径（5 分钟跑通）
+
+1. 在 智能体平台 创建智能体。
+2. 发布智能体为 **API 服务**。
+3. 生成 **PAT**。
+4. 在 `smartpi.cn` 创建“智能体配置”，填 `bot_id` 与 `PAT`，生成二维码。
+5. 微信小程序扫描二维码绑定设备。
+
+![项目开发（智能体列表）](./img/coze-os-project-dev-list.png)
+
+## 2. 获取 bot_id 与 PAT
+
+### 2.1 bot_id
+
+`bot_id` 是智能体的唯一标识。
+
+- 常见获取方式：打开智能体页面，查看浏览器地址栏中 `bot/` 后的数字。
+
+![选择并进入智能体](./img/coze-os-select-agent.png)
+
+![智能体编辑页概览](./img/coze-os-agent-editor-overview.png)
+
+### 2.2 PAT（Personal Access Token）
+
+智能体平台 API / Chat SDK 使用 PAT 进行鉴权。
+
+1. 登录 智能体平台。
+2. 点击左下角头像进入 **API Authorization / API 授权**。
+3. 点击 **Add New Token / 新建令牌**。
+4. 填写名称与过期时间后确认。
+5. 复制并保存 PAT。
+
+![进入 API 授权（PAT）](./img/coze-os-api-authorization-menu.png)
+
+!!! warning "PAT 只展示一次"
+    PAT 通常只在创建时展示一次。丢失后需要重新生成，并更新智能公元平台的配置。
+
+## 3. OpenAPI 调用速查（智能体平台 开源版）
+
+以下示例均需带上请求头：
+
+```text
+Authorization: Bearer pat_xxxxx
+Content-Type: application/json
+```
+
+### 3.1 创建会话（conversation）
+
+```bash
+curl --location '{{host}}/v1/conversation/create' \
+  --header 'Authorization: Bearer pat_xxxxx' \
+  --header 'Content-Type: application/json' \
+  --data '{"bot_id":"<bot_id>"}'
+```
+
+### 3.2 发起对话（chat v3，流式 SSE）
+
+```bash
+curl --location --request POST '{{host}}/v3/chat?conversation_id=<conversation_id>' \
+  --header 'Authorization: Bearer pat_xxxxx' \
+  --header 'Content-Type: application/json' \
+  --data-raw '{
+    "bot_id": "<bot_id>",
+    "user_id": "<your_user_id>",
+    "stream": true,
+    "auto_save_history": true,
+    "additional_messages": [
+      {"role":"user","content":"你好","content_type":"text"}
+    ]
+  }'
+```
+
+流式事件常见顺序：
+
+- `conversation.chat.created`
+- `conversation.chat.in_progress`
+- `conversation.message.delta`
+- `conversation.message.completed`
+- `conversation.chat.completed`
+- `done`
+
+### 3.3 消息列表 / 清理上下文
+
+- **消息列表**：`POST {{host}}/v1/conversation/message/list?conversation_id=...`
+- **清理上下文**：`POST {{host}}/v1/conversations/:conversation_id/clear`
+
+### 3.4 执行工作流
+
+```bash
+curl --location --request POST '{{host}}/v1/workflow/run' \
+  --header 'Authorization: Bearer pat_xxxxx' \
+  --header 'Content-Type: application/json' \
+  --data-raw '{
+    "workflow_id": "<workflow_id>",
+    "parameters": "{\"user_id\":\"12345\"}"
+  }'
+```
+
+## 4. 与智能公元设备对接（二维码绑定）
+
+你需要在智能公元平台创建“智能体配置”，并在设备侧完成扫码绑定。
+
+1. 打开 `https://smartpi.cn/`。
+2. 左侧菜单进入：**智能体 -> 配置**。
+3. 创建新配置并填写：
+   - `bot_id`
+   - `PAT`
+   - （可选）`workflow_id`（如果你的方案需要对话流/工作流）
+4. 保存后生成二维码。
+5. 打开“智能公元”微信小程序，在设备详情页点击 **AI智能体** 扫码绑定。
+
+## 5. 设备控制能力（MCP / 插件）
+
+### 5.1 MCP（推荐）
+
+1. 在小程序里配置控件（开关/滑块/按钮等）。
+2. 在智能公元平台进入 **MCP 工具**，点击 **刷新** 生成工具。
+3. 为每个工具补充清晰的名称与描述。
+4. 发布版本时勾选 **发布 MCP 工具**。
+5. 烧录固件后在设备对话中验证。
+
+### 5.2 插件（mcp_tool.yaml 导入）
+
+1. 在智能公元平台版本详情页的 **MCP 工具** 里下载 `mcp_tool.yaml`。
+2. 在 智能体平台**资源库**导入插件，并启用工具。
+3. 在对话流/工作流中将 `token`、`deviceKey` 作为输入变量传入工具。
+
+![插件页（示例）](./img/coze-os-plugin-store.png)
+
+![对话流/工作流画布（示例）](./img/coze-os-workflow-canvas.png)
+
+---
+
+## （旧版）智能公元自研接入 API（保留存档）
+
+以下 1~6 章为旧版平台的自研接入 API 说明。若你当前使用的是 智能体平台，请优先按本文前半部分的 OpenAPI 流程对接。
+
+## （旧版）1. 接入概览
 
 ### 1.1 适用场景
 - 已有自研大模型或完整智能体服务，需在设备端落地。
@@ -25,7 +172,7 @@ description: 智能体平台操作指南，包含 API 接入、MCP 与 Coze 插�
 
 ---
 
-## 2. HTTP 大模型服务参考 API
+## （旧版）2. HTTP 大模型服务参考 API
 
 适用于已准备好 ASR→LLM→TTS 流程中“LLM”环节的场景。设备默认使用平台 ASR 和 TTS，只需提供大模型推理接口即可。
 
@@ -81,7 +228,7 @@ data:"[DONE]"
 
 ---
 
-## 3. 完整对话服务参考 API（双向流式语音 WebSocket）
+## （旧版）3. 完整对话服务参考 API（双向流式语音 WebSocket）
 
 适用于自研了“语音识别 + 多模态推理 + 语音合成”能力的伙伴，通过 WebSocket 建立长连接，实现语音上/下行的实时对话。
 
@@ -371,7 +518,7 @@ data:"[DONE]"
 
 ---
 
-## 4. 大模型 + TTS 服务参考 API（文本输入 WebSocket）
+## （旧版）4. 大模型 + TTS 服务参考 API（文本输入 WebSocket）
 
 该模式通过 WebSocket 发送文本问题，并接收文本结果与 TTS 音频，适合纯文本问题、由接入方自定义语音合成的场景。
 
@@ -412,8 +559,7 @@ data:"[DONE]"
 与语音方案一致，包括 `chat.created`、`conversation.chat.created`、`conversation.message.delta`、`conversation.audio.delta`、`conversation.message.completed`、`conversation.audio.completed`、`conversation.chat.completed`、`conversation.chat.failed`、`error`、`conversation.chat.canceled` 等。示例结构可参考第 3 章，对应字段含义保持一致。
 
 ---
-
-## 5. MCP（Model Context Protocol）设备控制
+## （旧版）5. MCP（Model Context Protocol）设备控制
 
 MCP 让大模型能够使用平台生成的外部工具，实现对设备控件的查询与控制。
 
@@ -422,7 +568,7 @@ MCP 让大模型能够使用平台生成的外部工具，实现对设备控件�
 2. **生成工具**：切换到“**MCP 工具**”菜单，点击“刷新”生成与控件对应的工具。
 3. **补充描述**：每个工具需填写清晰的名称与描述，区分“控制”和“查询”类型，便于大模型理解。
 4. **发布工具**：版本发布前勾选“发布 MCP 工具”。
-5. **固件验证**：将生成的固件烧录到设备，使用平台提供的“体验版智能体”即可在对话中调用 MCP 控制设备。
+5. **固件验证**：将生成的固件烧录到设备，使用平台提供的体验能力即可在对话中调用 MCP 控制设备。
 
 ### 5.2 示例界面
 - 控件配置示例：![控件配置](https://help.aimachip.com/uploads/agent/images/m_65c54af7828158bf3f985baaf91cb9ec_r.png)
@@ -430,14 +576,13 @@ MCP 让大模型能够使用平台生成的外部工具，实现对设备控件�
 - 发布确认：![发布 MCP 工具](https://help.aimachip.com/uploads/agent/images/m_d02c5d57a924b078d235d347e3e2d315_r.png)
 
 ---
-
-## 6. coze 插件对接
+## （旧版）6. 插件对接
 
 平台提供“智能公元 IOT 插件”示例，亦可按照以下流程制作自定义插件。
 
 ### 6.1 生成插件
 1. 在版本详情页的 **MCP 工具** 菜单点击“预览”，在弹窗中选择“下载插件”，获取 `mcp_tool.yaml`。
-2. 登录 [coze 平台](https://www.coze.cn/)，在“工作空间 → 资源库”选择“添加插件”。
+2. 在智能体平台控制台的“资源库”选择“添加插件”。
 3. 在新建插件窗口点击右上角“导入”，上传 `mcp_tool.yaml`。
 4. 按向导点击“下一步”→“确认”。
 5. 资源库中会出现新插件，进入后将所有工具设置为“启用”。
@@ -450,7 +595,7 @@ MCP 让大模型能够使用平台生成的外部工具，实现对设备控件�
 4. 在“输入”栏引用“开始”节点的 `token`、`deviceKey` 变量。
 5. 在“用户提示词”中也引用上述变量，确保大模型能正确传参。
 6. 在结束节点开启“流式输出”。
-7. 发布对话流，即可在 coze 对话中调用插件。
+7. 发布对话流，即可在对话中调用插件。
 
 ### 6.3 配图参考
 - 插件检索：![插件搜索](https://help.aimachip.com/uploads/agent/images/m_a0f5fb3c924ca83e26f87398d9da19c1_r.png)
@@ -568,6 +713,8 @@ MCP 让大模型能够使用平台生成的外部工具，实现对设备控件�
     - 进入"模型提供商"管理页面
     - 点击"添加模型"按钮
     - 选择对应的模型类型（VLLM/Xinference）
+
+    ![模型管理（示例）](./img/coze-os-model-management.png)
 
 2. **配置模型参数**：
 
