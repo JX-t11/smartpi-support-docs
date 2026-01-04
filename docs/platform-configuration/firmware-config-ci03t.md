@@ -570,6 +570,18 @@ description: CI-03T 模组在智能公元平台的固件配置指南
 
 - **设置IISO主从**：配置IISO通信的主从模式
 
+**IISO接口信号说明：**
+
+IISO（I2S）是数字音频接口，用于与外部音频设备（如数字功放、DAC芯片）进行数字音频数据传输。在智能公元平台的引脚配置中，可配置的IISO信号包括：
+
+| 信号名称 | 功能描述 |
+| --- | --- |
+| IIS0_SDI | I2S串行数据输入（Serial Data Input），用于接收音频数据 |
+| IIS0_SDO | I2S串行数据输出（Serial Data Output），用于发送音频数据 |
+| IIS0_LRCLK | I2S左右声道时钟（Left/Right Clock），也称WS（Word Select），用于区分左右声道数据 |
+| IIS0_SCLK | I2S串行时钟（Serial Clock），也称BCLK（Bit Clock），用于同步音频数据位传输 |
+| IIS0_MCLK | I2S主时钟（Master Clock），用于提供系统基准时钟 |
+
 **配置建议**：
 
 1. **默认值优先**：如无特殊需求，建议使用默认值
