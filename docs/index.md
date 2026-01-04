@@ -17,77 +17,89 @@ description: 智能公元平台在不同模组、平台入口以及工具链上�
     2. 在 **模组与硬件章节** 找到你当前使用的模组型号。
     3. 遇到共性问题，优先查看 **常见问题** 与 **教程和示例固件**。
 
-## 平台与通用指南
+## 平台使用与开发入门
 
 <div class="grid cards" markdown>
 
+- [固件配置全流程](platform-configuration/firmware-config-workflow.md)
+    从创建产品到固件下载的完整可视化配置引导。
 - [Block 积木编程](block-programming/block-programming.md)  
     图形化搭积木的方式编写逻辑，对零基础用户友好。
-- [在线语音模组 · 天猫精灵](online-voice-tmall/tmall-genie.md)  
-    天猫精灵在线语音模组的接入、配置与调试说明。
-- [离在线语音 AI 大模型模组 · JX-A7T](offline-online-ai-jxa7t/jx-a7t.md)  
-    JX-A7T 模组的功能特性、开发流程与示例工程。
 - [小程序平台操作指南](miniapp-guide/miniapp-guide.md)  
     智能公元小程序平台入口、项目管理与调试步骤。
-- [产品结构设计指南](product-design-guide/design-guide.md)  
-    声学结构、喇叭与麦克风选型等产品设计建议。
-- [智能公元平台开发案例](platform-cases/platform-cases.md)  
-    典型项目案例与端到端解决方案归档。
-- [智能体](ai-agents/ai-agent.md)  
-    数字人 / 智能体相关概念与使用方式总览。
-- [常见问题](faq/faq.md)  
-    烧录、联网、语音识别等常见问题的集中解答。
 - [教程和示例固件](tutorials-examples/tutorials.md)
     官方示例工程、演示固件与上手教程合集。
-- [开源仓库](open-source/open-source.md)
-    与智能公元相关的开源 SDK、工具与示例代码链接。
-
-## 学习资源
-
-### 官方文档与教程
-
-- **智能公元文档中心**：[文档中心](https://help.aimachip.com/)
-    - 官方技术文档中心，包含各模组详细资料
-    - 提供开发指南、API文档和示例代码
-    - 支持在线搜索和分类浏览
-
-- **B站教程频道**：[机芯智能官方B站账号](https://space.bilibili.com/1903518159)
-    - 机芯智能官方B站账号
-    - 包含开发环境搭建指导
-    - 提供实际操作演示和教程视频
-    - 定期更新新功能和使用技巧
-
-</div>
-
-## 模组与硬件
-
-<div class="grid cards" markdown>
-
-- [WiFi 模组 · JX-12F](wifi-jx12f/jx-12f.md)  
-    JX-12F WiFi 模组的引脚说明、AT 指令与应用示例。
-- [WiFi 模组 · BL-62B](wifi-bl62b/bl-62b.md)  
-    BL-62B WiFi 模组的基本资料、配置步骤与调试要点。
-- [WiFi 图像模组 · XR-50A](wifi-image-xr50a/xr-50a.md)  
-    XR-50A 图像模组的硬件连接、图像采集与传输配置。
-- [离线语音模组 · CI 系列](offline-voice-ci03t/ci-03t.md) 
-    包含 CI-03T、CI-33T、CI-73T、CI-95C、CI-96Z 等型号, CI 系列各型号离线语音模组的统一入口与资料索引。
-- [离线语音模组 · SU 系列](offline-voice-su03t/su-03t.md) 
-    包含 SU-03T、SU-10A、SU-11T、SU-13T、SU-20T、SU-21T、SU-22T、SU-23T、SU-30T-31T、SU-32T、SU-63T 等型号,SU 系列各型号离线语音模组的统一入口与资料索引。
-- [离线语音模组 · JX-B5C](offline-voice-jxb5c/jx-b5c.md)  
-    JX-B5C 离线语音模组的硬件资料、固件与开发指南。
-
-</div>
-
-## 资料
-
-<div class="grid cards" markdown>
-
-- [模块性能与选型](module-performance/module-selection.md)  
-    对比各模组关键指标，为项目选型提供参考。
+- [产品结构设计指南](product-design-guide/design-guide.md)  
+    声学结构、喇叭与麦克风选型等产品设计建议。
 - [芯片手册](chip/chip.md)  
     核心芯片的规格书、寄存器说明等原始技术资料。
 
 </div>
+
+## 智能体开发平台
+
+<div class="grid cards" markdown>
+
+- [快速开始](ai-agents/get-started.md)
+    几分钟内完成你的第一个 AI 智能体创建与部署。
+- [智能体功能介绍](ai-agents/ai-agent.md)  
+    数字人 / 智能体相关概念、能力边界与使用方式总览。
+- [知识库配置指南](ai-agents/knowledge-base-setup.md)
+    如何上传文档并让 AI 学习你的私有知识库。
+- [智能体开发教程](ai-agents/tutorial.md)
+    从零到一开发具有特定功能的 AI 语音助手实战。
+
+</div>
+
+## 模组资料库
+
+<div class="grid cards" markdown>
+
+- [离在线语音 AI 模组 · JX-A7T](offline-online-ai-jxa7t/jx-a7t.md)  
+    离在线语音识别 + AI 大模型接入模组，支持 WiFi。
+- [离线语音 · SU 系列](offline-voice-su03t/su-03t.md) 
+    包含 SU-03T, SU-10A, SU-32T, SU-63T 等全系列离线模组。
+- [离线语音 · CI 系列](offline-voice-ci03t/ci-03t.md) 
+    包含 CI-03T, CI-33T, CI-73T, CI-96Z 等高性能语音芯片模组。
+- [WiFi 模组 · JX-12F / BL-62B](wifi-jx12f/jx-12f.md)  
+    纯 WiFi 通信模组，提供 AT 指令、透传与配网指南。
+- [WiFi 图像模组 · XR-50A](wifi-image-xr50a/xr-50a.md)  
+    支持摄像头图像采集、实时传输与 WiFi 联网功能。
+- [在线语音模组 · 天猫精灵](online-voice-tmall/tmall-genie.md)  
+    天猫精灵生态接入模组，支持在线语音交互与控制。
+
+</div>
+
+## 常见问题与技术支持
+
+<div class="grid cards" markdown>
+
+- [烧录与调试 FAQ](faq-burning-and-debug/burning_and_debug.md)
+    解决固件烧录失败、串口无日志、无法唤醒等初次使用问题。
+- [硬件设计 FAQ](faq-hardware-design/hardware_design.md)
+    电路接线、功放原理、电源稳定性等硬件相关避坑指南。
+- [语音调优 FAQ](faq-voice-tuning/voice_tuning.md)
+    提升唤醒灵敏度、降低误触发、解决播报音质问题。
+- [平台与固件 FAQ](faq-platform-and-firmware/platform_and_firmware.md)
+    关于平台账号、固件生成失败、变量逻辑控制等问题的解答。
+- [模块选型指南](module-performance/module-selection.md)  
+    对比各模组关键指标、功耗与识别距离，为项目选型提供参考。
+- [开源仓库与案例](open-source/open-source.md)
+    智能公元相关的开源 SDK、工具与典型应用案例归档。
+
+</div>
+
+## 学习资源
+
+<div class="grid cards" markdown>
+
+- **智能公元帮助中心**：[help.aimachip.com](https://help.aimachip.com/)
+    官方技术文档中心，包含各模组详细规格资料。
+- **B 站教程频道**：[机芯智能官方账号](https://space.bilibili.com/1903518159)
+    包含开发环境搭建指导、实际操作演示和教程视频。
+
+</div>
+
 
 ---
 
