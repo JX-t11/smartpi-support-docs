@@ -324,8 +324,7 @@ bl62b-sdk/
 
 | 场景 | 指令/API | 示例 | 备注 |
 | --- | --- | --- | --- |
-| STA 配网 | `AT+WJAP="SSID","PWD"` | ```AT+WJAP="DemoAP","12345678"
-``` | 完整 AT 指令表见《BL62B_EVB开发板用户指南V1.1.pdf》。|
+| STA 配网 | `AT+WJAP="SSID","PWD"` | `AT+WJAP="DemoAP","12345678"` | 完整 AT 指令表见《BL62B_EVB开发板用户指南V1.1.pdf》。|
 | MQTT 上报 | `mqtt_client_publish(topic, payload)` | 参考 `examples/wifi/mqtt_demo` | QoS/认证参数需根据项目确定。|
 | HTTP OTA | `http_client_get(url)` | 参考 `examples/wifi/http_ota` | 需配置 TLS 根证书。|
 

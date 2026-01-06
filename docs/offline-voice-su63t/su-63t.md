@@ -55,8 +55,8 @@ SU-63T 是一款蓝牙双模智能语音 IoT 模组。芯片集成 32 位 CPU �
 
 ## 外观尺寸
 
-- ![](http://help.aimachip.com/uploads/offline_su63t/images/m_0c8cb6526a24dd62579120f38fd8dc49_r.png)
-- ![](http://help.aimachip.com/uploads/offline_su63t/images/m_f7fc5cd5bec0fd682515209116eb1a94_r.png)
+- ![SU-63T模块外观](http://help.aimachip.com/uploads/offline_su63t/images/m_0c8cb6526a24dd62579120f38fd8dc49_r.png)
+- ![SU-63T引脚定义](http://help.aimachip.com/uploads/offline_su63t/images/m_f7fc5cd5bec0fd682515209116eb1a94_r.png)
 
 ### 官方资料下载
 
