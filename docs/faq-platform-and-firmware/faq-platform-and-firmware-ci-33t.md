@@ -1833,7 +1833,7 @@ crc_result = calculate_crc(data, sizeof(data));
 - 采用其他校验方式（如累加和校验）
 
 ---
----
+
 ### CI-33T的TTS授权模块如何通过串口发送文字播报？
 
 **问题描述：**

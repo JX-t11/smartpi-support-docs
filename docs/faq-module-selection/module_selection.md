@@ -742,7 +742,7 @@ BK7252N平台支持语音唤醒功能，但需要考虑以下因素：
 
 **参数对比表：**
 
-![](img/voice_module_parameter_comparison.jpg)
+![语音模块参数对比](img/voice_module_parameter_comparison.jpg)
 
 **核心参数解析：**
 

@@ -13,7 +13,7 @@
 - 文件名建议使用英文，避免特殊字符
 - 文件大小：建议不超过10MB
 
-![](/docs/offline-voice-su03t/assets/kb-upload-interface.jpg)
+![知识库上传界面](/docs/offline-voice-su03t/assets/kb-upload-interface.jpg)
 
 ### 2. 设备配置
 
@@ -23,7 +23,7 @@
 - 标识ID：唯一标识符
 - 功能设置：根据实际需求配置
 
-![](/docs/offline-voice-su03t/assets/kb-device-config.jpg)
+![设备配置界面](/docs/offline-voice-su03t/assets/kb-device-config.jpg)
 
 ## 格式要求
 
