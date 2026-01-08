@@ -3464,7 +3464,7 @@ Booting LF686 Chip...
 
 这表明缓冲区已满，任务阻塞，最终触发看门狗导致模块重启。
 
-![StreamBuffer错误日志](./img/17666660771035694d2f5d19433.jpg)
+![StreamBuffer 错误日志](./img/stream-buffer-error.jpg)
 
 *日志显示StreamBuffer发送失败，counter逐渐增加，最终触发重启*
 
