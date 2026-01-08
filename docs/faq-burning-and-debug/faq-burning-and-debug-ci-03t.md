@@ -626,7 +626,7 @@ CI-03T1的串口引脚定义为：
 
 **对于 CI-03T 模块，必须选择 CI1303**（图片中已高亮显示为蓝色选中状态）。
 
-![CI130X_UPDATE_TOOLS 型号选择界面](./img/17667622573223694ea7114eaf4.jpg)
+![CI130X_UPDATE_TOOLS 型号选择界面](./img/ci130x-update-tool-model.jpg)
 
 ---
 
