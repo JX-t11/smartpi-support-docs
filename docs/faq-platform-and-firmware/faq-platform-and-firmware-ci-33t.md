@@ -1864,9 +1864,9 @@ FD 00 08 01 01 C4 E3 BA C3 0D 0A
 - `C4 E3 BA C3`：文字编码（UTF-8）
 - `0D 0A`：结束符
 
-![jixin_tool串口调试示例](./img/17550668928577689c320cd163a.jpg)
+![jixin_tool串口调试示例](./img/jixin-tool-debug.jpg)
 
-![串口数据格式说明](./img/17550681828708689c3716d49b1.jpg)
+![串口数据格式说明](./img/uart-format-desc.jpg)
 
 **注意事项：**
 
