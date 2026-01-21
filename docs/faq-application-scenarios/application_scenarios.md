@@ -1624,7 +1624,7 @@ https://mp.kidsv.cn/qrcode?name=&did=&mac=
 **参数说明：**
 
 - `name`：蓝牙名称（使用指定的设备名称）
-- `did`：设备ID
+- `did`：产品ID（注意是产品ID，不是设备ID）
 - `mac`：设备MAC地址
 
 **协议命令示例：**
