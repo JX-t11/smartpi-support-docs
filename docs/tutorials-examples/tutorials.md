@@ -111,7 +111,7 @@ description: 覆盖入门到进阶的教程与示例固件，提供从准备到�
 | SU-22T | 串口输入输出 | [查看](https://help.aimachip.com/docs/tutorials-and-sample-firmware/tutorials-and-sample-firmware-1gabr04fpbl84) |
 | SU-23T | 烧录视频 | [查看](https://help.aimachip.com/docs/tutorials-and-sample-firmware/tutorials-and-sample-firmware-1gb08isui2005) |
 | SU-23T | IO 口输入输出 | [查看](https://help.aimachip.com/docs/tutorials-and-sample-firmware/tutorials-and-sample-firmware-1gabqvij38om9) |
-| SU-23T | 串口输入输出 | [查看](https://help.aimachip.com/docs/tutorials-and-sample-firmware/tutorials-and-sample-firmware-1gabr61417at5) |
+| SU-23T | 串口输入输出 | [查看](https://help.aimachip.com/docs/tutorials-and-sample-firmware/tutorials-and-sample-firmware-1gabr61417at5) / [B站视频](https://www.bilibili.com/video/BV1S14y197rg/) |
 | SU-31T | 烧录视频 | [查看](https://help.aimachip.com/docs/tutorials-and-sample-firmware/tutorials-and-sample-firmware-1gb08kser4jka) |
 | SU-61T | 烧录视频 | [查看](https://help.aimachip.com/docs/tutorials-and-sample-firmware/tutorials-and-sample-firmware-1gb08md64ptav) |
 
