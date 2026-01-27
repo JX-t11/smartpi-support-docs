@@ -104,7 +104,20 @@
 
 ![语音模块参数对比表（2025-12-22）](./img/voice_module_parameter_comparison_20251222.jpg)
 
-**完整参数对比图（全型号）**  
+**更新记录（2026-01-26）：**
+
+- 新增官方现行语音模块参数对比图（含CI系列全型号 + SU系列全型号）
+- 补充CI-73T1/2、CI-95C1/2、CI-96Z61/62等型号详细参数
+
+**官方对比图（现行语音模块参数对比）**
+
+![现行语音模块参数对比图（官方版）](./img/voice-module-comparison-official-20260126.jpg)
+
+**历史对比图（2025-12-22）**
+
+![语音模块参数对比表（2025-12-22）](./img/voice_module_parameter_comparison_20251222.jpg)
+
+**完整参数对比图（全型号）**
 
 ![语音模块完整参数对比表](./img/voice-module-comparison-table-20251222.jpg)
 
