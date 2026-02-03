@@ -659,11 +659,11 @@ CI-03T芯片焊接到电路板后，无法通过CH340烧录器进行固件烧录
 
 **官方资料下载方式：**
 
-1. **百度网盘下载**：
+1. **官网资料下载**：
 
-    - **链接**：https://pan.baidu.com/s/1Fb24gvOwHKtxB8QlJtjJiA
-    - **提取码**：xjtt
+    - **链接**：https://help.aimachip.com/docs/offline_ci03t/offline_ci03t-1eboja4efbc49
     - **内容**：包含完整的说明书、开发资料、技术参数等文档
+    
 **EDA设计支持：**
 
 对于使用嘉立创EDA等设计工具的用户，CI-03T模块已添加到常用器件库：
