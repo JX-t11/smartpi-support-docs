@@ -1537,10 +1537,9 @@ if (voice_command == "调亮") {
 
 **官方资料下载方式：**
 
-1. **百度网盘下载**：
+1. **官网资料下载**：
 
-    - **链接**：https://pan.baidu.com/s/1Fb24gvOwHKtxB8QlJtjJiA
-    - **提取码**：xjtt
+    - **链接**：https://help.aimachip.com/docs/offline_ci03t/offline_ci03t-1eboja4efbc49
     - **内容**：包含完整的说明书、开发资料、技术参数等文档
 
 
