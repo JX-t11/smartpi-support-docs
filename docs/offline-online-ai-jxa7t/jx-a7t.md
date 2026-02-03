@@ -399,6 +399,17 @@ JX-A7T 通过智能公元平台进行配置，支持自定义唤醒词、命令�
 |------|---------|
 | 智能体平台示例 | [下载RAR](https://help.aimachip.com/attach_files/jx_a7t_v1/1232) |
 | 知识库示例 | [下载RAR](https://help.aimachip.com/attach_files/jx_a7t_v1/1217) |
+| 效果演示+教程合集 | [在线查看](https://www.smartpi.cn/#/works/view/430) |
+
+### 在线演示资源
+
+**智能公元平台演示作品**：
+
+- **JX-A7T 效果演示与教程合集**：[查看作品](https://www.smartpi.cn/#/works/view/430)
+  - 包含 JX-A7T 模块的实际效果演示
+  - 提供完整的教程合集
+  - 附带可用的 JSON 配置文件
+  - 可直接在平台在线体验和导入使用
 
 ### 离在线混合模式
 
