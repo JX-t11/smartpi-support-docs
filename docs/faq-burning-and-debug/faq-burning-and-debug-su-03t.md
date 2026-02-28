@@ -12040,6 +12040,51 @@ void loop() {
 }
 ```
 
+**接收16进制数据的代码示例：**
+
+当 SU-03T 在智能公元平台配置为发送16进制数据（如参数 `01`、`02`）时，模块发送的是单字节16进制数（0x01、0x02），需要使用 `Serial.read()` 读取单个字节：
+
+```cpp
+#include <SoftwareSerial.h>
+
+SoftwareSerial mySerial(2, 3); // RX, TX
+
+void setup() {
+  Serial.begin(9600);
+  mySerial.begin(9600);
+  pinMode(13, OUTPUT);  // LED指示灯
+  digitalWrite(13, LOW);
+  Serial.println("Ready. Waiting for commands...");
+}
+
+void loop() {
+  if (mySerial.available() > 0) {
+    byte cmd = mySerial.read();  // 读取单个字节（16进制）
+
+    // 调试输出
+    Serial.print("Received HEX: 0x");
+    Serial.println(cmd, HEX);
+
+    // 根据接收到的16进制命令执行动作
+    if (cmd == 0x01) {
+      digitalWrite(13, HIGH);  // 点亮LED
+      Serial.println("LED ON");
+    }
+    else if (cmd == 0x02) {
+      digitalWrite(13, LOW);   // 熄灭LED
+      Serial.println("LED OFF");
+    }
+  }
+}
+```
+
+**16进制数据接收说明：**
+
+- 平台发送参数为16进制格式（如 `01`、`02`）时，模块发送的是数值 0x01、0x02，不是字符串 "01"
+- 此时必须使用 `Serial.read()` 读取单个字节，不能使用 `readString()`
+- 平台参数格式：两个字符一组，空格分隔，例如：`98 A3 0B FE`
+- 串口调试工具勾选"16进制显示"时，发送的也是16进制数值
+
 **2. 烧录原理说明**
 
 - 烧录是将程序指令通过特定工具输入到芯片存储单元中
