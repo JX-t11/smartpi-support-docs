@@ -1319,12 +1319,18 @@ JX-12F开发板在烧录固件时失败，错误信息显示"LOAD HELP BIN FAIL"
 
 **2. 正确的文件选择**
 
-根据烧录工具界面，按顺序选择固件包中的对应文件：
+根据烧录工具界面，每次更改配置进行硬件烧录时，需要按顺序选择固件包中的以下4个文件：
 
-- **Factory Params**：工厂参数文件
-- **Partition Table**：分区表文件
-- **Boot2 Bin**：引导程序文件
-- **Firmware Bin**：主固件文件
+- **Factory Params**：工厂参数文件（如 `factory_params_IoTKita_40M.dts`）
+- **Partition Table**：分区表文件（如 `partition_cfg_2M_ota.toml`）
+- **Boot2 Bin**：引导程序文件（如 `boot2_isp_release.bin`）
+- **Firmware Bin**：主固件文件（如 `jx_12f_firmware.bin`）
+
+> **提示**：JX-12F支持小程序OTA远程升级功能，如果设备已预装基础固件，可通过OTA方式更新固件，无需每次都进行硬件烧录。
+
+![JX-12F烧录配置界面](./img/jx12f-burning-config-4files.jpg)
+
+*JX-12F硬件烧录需配置4个文件：Factory Params、Partition Table、Boot2 Bin、Firmware Bin*
 
 ![Leapfive Flash Environment烧录界面](./img/475a41c8.jpg)
 
