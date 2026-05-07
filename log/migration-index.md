@@ -105,3 +105,18 @@
 | 41 | `online-voice-tmall/tmall-genie.md` + voice tuning content | `/guides/voice-tuning/tmall-genie.mdx` | ✅ 已合并 |
 | 42 | `module-performance/module-selection.md` (superseded by selection-guide) | — | ⏭️ 内容已并入 /modules/selection-guide.mdx，源文件未迁移 |
 
+
+---
+
+## 导航审计（2026-05-07）
+
+### Q-NAV-STRUC-02: 文档结构合理性审查
+
+| 变更项 | 变更前 | 变更后 | 原因 |
+|--------|--------|--------|------|
+| docs.json `模组资料` 导航组 | "固件配置" + "离线语音模组" 两组重叠 | 移除"固件配置"，重命名"离线语音模组"为"产品规格" | 两组内容交叉引用同一型号文件，用户困惑；配置类指南应归入 Guides/平台配置 |
+| ai-voice/index.mdx Card href | `href="/modules/firmware-configuration/su-series"`（错误链接） | 移除 href（由内层 Card 导航到 jx-a7t） | AI+离线双模卡片描述的是 JX-A7T，不应跳转到 SU 固件配置页 |
+| modules/index.mdx Card | "固件配置" → `/modules/firmware-configuration/su-series` | "平台配置" → `/guides/platform-configuration/workflow` | 与导航结构调整一致，链接到通用平台配置流程页 |
+
+**影响范围**: docs.json, modules/ai-voice/index.mdx, modules/index.mdx (3 files)  
+**保留文件**: `modules/firmware-configuration/su-series.mdx`, `modules/firmware-configuration/ci-series.mdx` 仍存在于磁盘但不在导航中（可通过内部链接或搜索访问）
