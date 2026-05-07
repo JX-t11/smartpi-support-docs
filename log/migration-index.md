@@ -104,6 +104,7 @@
 | 40 | `offline-online-ai-jxa7t/jx-a7t.md` | `/modules/ai-modules/jx-a7t.mdx` | ✅ 已转换 |
 | 41 | `online-voice-tmall/tmall-genie.md` + voice tuning content | `/guides/voice-tuning/tmall-genie.mdx` | ✅ 已合并 |
 | 42 | `module-performance/module-selection.md` (superseded by selection-guide) | — | ⏭️ 内容已并入 /modules/selection-guide.mdx，源文件未迁移 |
+| 43 | `platform-configuration/uart-input-parameter.md` (UART RX输入参数配置) | `/guides/platform-configuration/uart-input-parameter.mdx` | ✅ 已转换
 
 
 ---
