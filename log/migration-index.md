@@ -327,6 +327,16 @@
 
 ---
 
+### CALLOUT-TIP-FIX-01: 全局替换 <Callout type="tip"> → type="info"（2026-05-07）
+
+| 项目 | 详情 |
+|------|------|
+| **问题** | 36 个 .mdx 文件中共有 107 处 `<Callout type="tip">`，Mintlify 合法类型仅为 `note/info/warning/danger`（无 "tip"） |
+| **根因** | MkDocs `!!! tip` → Mintlify 转换时被错误映射为 `<Callout type="tip">`，应为 `<Callout type="info">` |
+| **变更** | 全局替换所有 `<Callout type="tip">` → `<Callout type="info">`（107处，36文件） |
+| **结果** | Callout 类型合规：note(4), info(253), warning(188), danger(9) — 总计 454 个合法类型 ✓ |
+
+
 ## DOCSJSON-REVIEW-01 审查记录（2026-05-07）
 
 | 检查项 | 状态 | 说明 |
