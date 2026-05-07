@@ -23,14 +23,14 @@
 | # | 源文件路径 | 目标路径 | 状态 |
 |---|-----------|---------|------|
 | 6 | `faq-burning-and-debug/burning_and_debug.md` | `/troubleshooting/burning-and-debug/index.mdx` | ✅ 已合并 |
-| 7 | `faq-burning-and-debug/*.md` (model-specific FAQ) | `/troubleshooting/burning-and-debug/common-issues.mdx` + `step-by-step.mdx` | ✅ 已合并 |
+| 7 | `faq-burning-and-debug/*.md` (model-specific FAQ) | `/troubleshooting/burning-and-debug/common-issues.mdx` + `step-by-step.mdx` + `robot-faq.mdx` | ✅ 已合并 |
 | 8 | `faq-burning-and-debug/*.md` (SU vs CI comparison) | `/troubleshooting/burning-and-debug/model-differences.mdx` | ✅ 已合并 |
 
 ### FAQ 类 — 应用场景（22→4 页面）
 
 | # | 源文件路径 | 目标路径 | 状态 |
 |---|-----------|---------|------|
-| 9 | `faq-application-scenarios/faq-application-scenarios-*.md` (21 model-specific) | `/troubleshooting/application-scenarios/index.mdx` + `common-issues.mdx` + `model-differences.mdx` + `step-by-step.mdx` | ✅ 已合并 |
+| 9 | `faq-application-scenarios/faq-application-scenarios-*.md` (21 model-specific) | `/troubleshooting/application-scenarios/index.mdx` + `common-issues.mdx` + `model-differences.mdx` + `step-by-step.mdx` + `robot-faq.mdx` | ✅ 已合并 |
 
 ### FAQ 类 — 硬件设计（22→4 页面）
 
