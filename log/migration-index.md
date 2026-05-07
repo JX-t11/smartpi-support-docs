@@ -324,3 +324,19 @@
 | 3 | `tutorials-examples/tutorials.md`（教程索引，168 行） | `/guides/tutorials/index.mdx` | ✅ 已确认覆盖 |
 
 **审计结论**: 209 个源文件中，除通配合并组外，所有未单独列出的文件均已逐条确认覆盖。剩余约 40 个 `.md` 文件的精确文件名属于通配合并组（如 `offline-voice-su*/` 下的各型号文件），其内容已按通配符映射表整合至对应目标页面。
+
+---
+
+## DOCSJSON-REVIEW-01 审查记录（2026-05-07）
+
+| 检查项 | 状态 | 说明 |
+|--------|------|------|
+| docs.json ↔ .mdx 文件匹配 | ✅ PASS | 58 nav entries = 58 files on disk, all consistent |
+| frontmatter（title/description/icon） | ✅ PASS | 全部 58 文件完整 |
+| 链接绝对化（无 `../`） | ✅ PASS | 所有内部链接以 `/` 开头且可解析 |
+| 图片 alt 文本 | ✅ PASS | 无空 alt-text |
+| MkDocs 组件残留 | ✅ PASS | 无 `!!!` / `???` 语法残留 |
+| 标题层级跳级 | 🐛 已修复 | model-differences.mdx: H1→H3 跳级（8处），修正为 H1→H2 |
+| 术语"您" vs "你" | ✅ PASS | "您" 仅出现于代码/数据示例，非文档正文 |
+
+**提交**: docs submodule `1090651` (heading hierarchy fix), main repo `671b2bf` (tracking files)
