@@ -120,3 +120,23 @@
 
 **影响范围**: docs.json, modules/ai-voice/index.mdx, modules/index.mdx (3 files)  
 **保留文件**: `modules/firmware-configuration/su-series.mdx`, `modules/firmware-configuration/ci-series.mdx` 仍存在于磁盘但不在导航中（可通过内部链接或搜索访问）
+
+---
+
+## 内容优化记录（2026-05-07）
+
+### CONTENT-QA-04: voice-tuning/model-differences.mdx 精简重构
+
+| 项目 | 详情 |
+|------|------|
+| **问题** | 文件14,828行，包含239个FAQ Accordion模块、168张图片引用，大量内容与 troubleshooting.mdx/index.mdx 重复 |
+| **变更** | 删除所有通用调试内容（唤醒词清除、命令说多次识别、误触发解决等），保留仅型号特有的调优差异 |
+| **结果** | 279行（减幅98%）；5个Tab（CI-03T/CI-33T/CI-73T+CI-95C/SU系列/JX-A7T）结构清晰；标题层级合规 |
+| **删除内容去向** | FAQ类通用调试内容已在 troubleshooting.mdx 中覆盖，无需迁移至 model-differences.mdx |
+
+### Q-LINKS-PENDING: common-issues.mdx 相对链接修复（待执行）
+
+| 项目 | 详情 |
+|------|------|
+| **问题** | troubleshooting/platform-and-firmware/common-issues.mdx 和 burning-and-debug/common-issues.mdx 中存在 `../` 引用 |
+| **优先级** | P1 — 链接规范违规 |
