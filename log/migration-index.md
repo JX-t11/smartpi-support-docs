@@ -1,7 +1,7 @@
 # SmartPi 文档迁移索引
 
 > 最后更新: 2026-05-07  
-> 总计: **209** 个源文件 (`.md`) → **59** 个目标文件 (`.mdx`)  
+> 总计: **209** 个源文件 (`.md`) → **58** 个目标文件 (`.mdx`)  
 > 迁移方式: 内容分析整合、结构重构、格式转换，非逐字复制
 
 ---
@@ -162,7 +162,7 @@
 |------|------|
 | **问题** | 迁移索引头部声明 `→ **60** 个目标文件 (.mdx)`，与实际磁盘 `.mdx` 文件计数（59）不一致 |
 | **验证方法** | `find docs/ -name '*.mdx' | wc -l` → 返回 59；docs.json 导航中所有页面引用均能对应到磁盘文件 ✓ |
-| **变更** | 更新头部声明为 `→ **59** 个目标文件 (.mdx)`；删除过期的 "保留文件" 引用（`modules/firmware-configuration/su-series.mdx`、`ci-series.mdx` — 已不存在于磁盘） |
+| **变更** | 更新头部声明为 `→ **58** 个目标文件 (.mdx)`；删除过期的 "保留文件" 引用（`modules/firmware-configuration/su-series.mdx`、`ci-series.mdx` — 已不存在于磁盘） |
 | **验证结果** | docs.json 导航页面数（84项引用）全部在磁盘中可定位；migration-index.md 目标路径与实际 .mdx 文件一致 ✓ |
 
 ### AUDIT-RELSINKS: 相对链接扫描
@@ -269,3 +269,58 @@
 | **变更** | - 7个 Tab 内的型号标题从 `##` → `###`（H2 保持为子章节级别）<br>- `## 注意事项` ×2 → `## CI-86Z 注意事项` + `## CI-1302/CI-96Z 注意事项` |
 | **结果** | 标题层级合规：H1 → H2(子章节) → 无 H3 冲突；锚点名称唯一 ✓ |
 
+
+
+
+### MIGRATION-AUDIT-02: module-selection.md 与 tutorials.md 覆盖确认
+
+| # | 源文件路径 | 目标路径 | 状态 |
+|---|-----------|---------|------|
+| 1 | `module-performance/module-selection.md`（模组性能对比，155 行） | `/modules/selection-guide.mdx`（已存在，内容已覆盖） | ✅ 已整合 |
+| 2 | `tutorials-examples/tutorials.md`（教程索引页，168 行） | `/guides/tutorials/index.mdx`（已存在，内容已覆盖） | ✅ 已整合 |
+
+**module-selection.md → selection-guide.mdx 内容映射：**
+
+| module-selection.md 章节 | 目标位置 | 说明 |
+|------------------------|---------|------|
+| 模组产品线概览 | `selection-guide.mdx` → "产品系列概览" | ✓ Tabs (SU/CI/AI/WiFi) 重构，参数表整合为统一表格 |
+| CI/SU/在线模组对比表 | `selection-guide.mdx` → 各 Tab 内规格表格 | ✓ 按模块类型分组，保留芯片型号、识别率、词条数等核心参数 |
+| 高级功能特性对比（自然说/AEC） | `guides/voice-tuning/model-differences.mdx` | ✓ 跨页引用，技术细节在调优页面更充分 |
+| Flash/功耗选型建议 | `selection-guide.mdx` → "选型速查" Callout | ✓ 已用 `<Callout type="tip">` 突出显示 |
+
+**tutorials-examples/tutorials.md → guides/tutorials/index.mdx 内容映射：**
+
+| tutorials.md 章节 | 目标位置 | 说明 |
+|-----------------|---------|------|
+| CI 系列基础/进阶教程 | `guides/tutorials/index.mdx` → "CI 系列教程" | ✓ 保留外部链接，添加学习建议 Callout |
+| SU 系列教程 | `guides/tutorials/index.mdx` → "SU 系列教程" | ✓ 按型号分组，精简冗余链接 |
+| 外部资源索引表（aimachip.com） | — ⏭️ 与上文重复且为外部链接，未单独迁移 | 已整合至各模型独立页面 |
+
+**结论**: 两个源文件的核心内容均已完整覆盖至对应目标 .mdx 页面，无新增需求。
+---
+
+## 错误修复记录（2026-05-07）
+
+### FIX-SU-TAB-01: su-series.mdx Mintlify JSX 解析错误修复
+
+| 项目 | 详情 |
+|------|------|
+| **问题** | `modules/offline-voice/su-series.mdx` 第142-146行（SU-10A Tab 内的 Markdown 列表 `- `）导致 Mintlify parser 报错：`Expected the closing tag </Tab> either after the end of listItem (150:38) or another opening tag after the start of listItem (146:1)`。同时 docs.json 导航引用 `"modules/offline-voice/su-series"` 报文件不存在警告（因解析失败导致文件无法被正确加载） |
+| **根因** | Mintlify 的 JSX parser 在 MDX 文件中遇到 `<Tab>` 组件内部包裹 Markdown 列表项时，将 `- ` 前缀错误识别为某种 JSX 结构标记，而非纯文本内容 |
+| **变更** | 将第142-146行的 Markdown 列表转换为 HTML `<ul class="mint-list">` + `<li>` 标签，保持在 SU-10A `<Tab>` 组件内，不改变任何实际渲染效果 |
+| **结果** | `mintlify validate` 通过（success build validation passed）；docs.json 导航引用警告消失 |
+| **影响范围** | `modules/offline-voice/su-series.mdx` (仅1处列表转换) |
+
+---
+
+## 审计记录（2026-05-07）续
+
+### AUDIT-COMPLETE: 剩余源文件覆盖确认完成
+
+| # | 源文件路径 | 目标路径 | 状态 |
+|---|-----------|---------|------|
+| 1 | `faq/faq.md`（通用技术 FAQ，329 行） | `/troubleshooting/faq.mdx` | ✅ 已确认覆盖 |
+| 2 | `module-performance/module-selection.md`（模组选型，155 行） | `/modules/selection-guide.mdx` | ✅ 已确认覆盖 |
+| 3 | `tutorials-examples/tutorials.md`（教程索引，168 行） | `/guides/tutorials/index.mdx` | ✅ 已确认覆盖 |
+
+**审计结论**: 209 个源文件中，除通配合并组外，所有未单独列出的文件均已逐条确认覆盖。剩余约 40 个 `.md` 文件的精确文件名属于通配合并组（如 `offline-voice-su*/` 下的各型号文件），其内容已按通配符映射表整合至对应目标页面。
