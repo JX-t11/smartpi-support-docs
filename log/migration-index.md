@@ -374,3 +374,18 @@
 | **结果** | ✅ 先前审计识别的所有问题均已在之前提交中修复。本次复核确认无新增问题 |
 
 **结论**: 文档仓库当前处于健康状态，无需额外变更。建议下一轮扫描聚焦于新增/修改内容的质量保障。
+
+
+---
+
+## 错误修复记录（2026-05-07）
+
+### FIX-ACCORDION-TYPE-NEUTRAL-01: 移除 Accordion 组件不支持的 type="neutral" 属性
+
+| 项目 | 详情 |
+|------|------|
+| **问题** | `guides/tutorials/index.mdx` 中 2 个 `<Accordion>` 组件使用了 `type="neutral"`，Mintlify Accordion 组件不支持此类型属性（仅 Callout 支持 note/info/warning/danger） |
+| **根因** | 迁移时错误地将 Callout 的 type 属性复制到 Accordion 组件 |
+| **变更** | 移除第 57、115 行的 `type="neutral"`，Accordion 恢复默认折叠行为（无类型样式） |
+| **结果** | Accordion 使用标准渲染样式，不再有无效 prop warning；`mintlify validate` 应通过 ✓ |
+
