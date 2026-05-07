@@ -141,3 +141,12 @@
 |------|------|
 | **问题** | troubleshooting/platform-and-firmware/common-issues.mdx 和 burning-and-debug/common-issues.mdx 中存在 `../` 引用 |
 | **优先级** | P1 — 链接规范违规 |
+
+### US513U61 内容补全（2026-05-07）
+
+| # | 源文件路径 | 目标路径 | 状态 |
+|---|-----------|---------|------|
+| 44 | `faq-voice-tuning/faq-voice-tuning-us513u61.md` (US513U61 语音调优 FAQ) | `/guides/voice-tuning/model-differences.mdx` (新增 US513U61 Tab) | ✅ 已整合 |
+
+**说明**: US513U61 为低功耗离线语音芯片，其调优内容（误唤醒率硬件/软件优化、电源配置 VDD_IO/VDD_CORE/MIC、休眠行为）已整合至 model-differences.mdx 新增 `<Tab title="US513U61">` 模块。单词执行命令和平台 SDK 相关通用内容已在 troubleshooting.mdx 中覆盖，未重复迁移。
+
