@@ -229,3 +229,33 @@
 | **结果** | 标题层级合规（H1→H2→H3 无跳级）；16个FAQ条目统一归入新分类结构清晰 |
 | **审查** | frontmatter完整 ✓、无相对链接 ✓、Accordion平衡（2/2）✓、heading hierarchy 无跳级 ✓ |
 
+
+---
+
+## 源文件覆盖记录（2026-05-07）
+
+### MIGRATION-COVERAGE-FAQ: faq/faq.md 内容整合记录
+
+| # | 源文件路径 | 目标路径 | 状态 |
+|---|-----------|---------|------|
+| — | `faq/faq.md`（通用技术 FAQ，329 行） | `/troubleshooting/faq.mdx`（已存在，内容已覆盖） | ✅ 已整合 |
+
+**内容映射详情：**
+
+| faq.md 章节 | 目标位置 | 说明 |
+|------------|---------|------|
+| 语音识别基础 (ASR) | `troubleshooting/faq.mdx` → "语音识别基础" | ✓ 完全覆盖 |
+| 唤醒词规则（中文/英文） | `troubleshooting/faq.mdx` → "唤醒词相关" | ✓ 已用 `<Steps>` + `<Tabs>` 重构 |
+| 命令词自定义规则 | `troubleshooting/faq.mdx` → "命令词相关" | ✓ 完全覆盖 |
+| 免唤醒命令词 / 防误识别 | `troubleshooting/faq.mdx` → "命令词相关" | ✓ 完全覆盖 |
+| 降噪（稳态/深度）+ 信噪比 | `troubleshooting/faq.mdx` → "降噪相关" | ✓ 已用 `<Accordion>` 重构 |
+| 自学习功能 | `troubleshooting/faq.mdx` → "自学习功能" | ✓ 步骤用 `<Steps>` 组件呈现 |
+| 自然说功能（CI 系列） | `troubleshooting/faq.mdx` → "自然说功能" + `guides/voice-tuning/` | ✓ 跨页覆盖 |
+| 烧录基础概念 | — ⏭️ 与 `burning-and-debug/index.mdx` 详细流程重复，未单独迁移 |
+
+**已删减内容（无技术价值）：**
+- 产品特性索引表（外部链接指向 aimachip.com 帮助中心，非 SmartPi 文档范畴）
+- 其他问题索引表（同上，外部链接）
+- 商务合作章节（整机 PCBA 供应、芯片代理等商业信息，不属于技术规范）
+
+**结论**: `faq/faq.md` 的核心技术内容已完整整合至现有目标文件，无新增 .mdx 页面需求。源文件保留但标记为已覆盖。
