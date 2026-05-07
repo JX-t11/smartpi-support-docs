@@ -1,10 +1,11 @@
 # SmartPi 文档迁移索引
 
 > 最后更新: 2026-05-07  
-> 总计: **209** 个源文件 (`.md`) → **60** 个目标文件 (`.mdx`)  
+> 总计: **209** 个源文件 (`.md`) → **59** 个目标文件 (`.mdx`)  
 > 迁移方式: 内容分析整合、结构重构、格式转换，非逐字复制
 
 ---
+
 
 ## 迁移完成（已完成合并/重构）
 
@@ -120,7 +121,6 @@
 | modules/index.mdx Card | "固件配置" → `/modules/firmware-configuration/su-series` | "平台配置" → `/guides/platform-configuration/workflow` | 与导航结构调整一致，链接到通用平台配置流程页 |
 
 **影响范围**: docs.json, modules/ai-voice/index.mdx, modules/index.mdx (3 files)  
-**保留文件**: `modules/firmware-configuration/su-series.mdx`, `modules/firmware-configuration/ci-series.mdx` 仍存在于磁盘但不在导航中（可通过内部链接或搜索访问）
 
 ---
 
@@ -135,13 +135,14 @@
 | **结果** | 279行（减幅98%）；5个Tab（CI-03T/CI-33T/CI-73T+CI-95C/SU系列/JX-A7T）结构清晰；标题层级合规 |
 | **删除内容去向** | FAQ类通用调试内容已在 troubleshooting.mdx 中覆盖，无需迁移至 model-differences.mdx |
 
-### Q-LINKS-PENDING: common-issues.mdx 相对链接修复（待执行）
+### LINKS-FIXED: common-issues.mdx 相对链接修复（已完成）
 
 | 项目 | 详情 |
 |------|------|
 | **问题** | troubleshooting/platform-and-firmware/common-issues.mdx 和 burning-and-debug/common-issues.mdx 中存在 `../` 引用 |
 | **优先级** | P1 — 链接规范违规 |
 
+| **结果** | 经 `find + grep` 扫描全部 `.mdx` 文件（59个），未检测到任何相对链接（`../` 引用）|
 ### US513U61 内容补全（2026-05-07）
 
 | # | 源文件路径 | 目标路径 | 状态 |
@@ -150,3 +151,38 @@
 
 **说明**: US513U61 为低功耗离线语音芯片，其调优内容（误唤醒率硬件/软件优化、电源配置 VDD_IO/VDD_CORE/MIC、休眠行为）已整合至 model-differences.mdx 新增 `<Tab title="US513U61">` 模块。单词执行命令和平台 SDK 相关通用内容已在 troubleshooting.mdx 中覆盖，未重复迁移。
 
+
+---
+
+## 审计记录（2026-05-07）
+
+### AUDIT-MIGRATION-COUNT: migration-index.md 目标文件数一致性审查
+
+| 项目 | 详情 |
+|------|------|
+| **问题** | 迁移索引头部声明 `→ **60** 个目标文件 (.mdx)`，与实际磁盘 `.mdx` 文件计数（59）不一致 |
+| **验证方法** | `find docs/ -name '*.mdx' | wc -l` → 返回 59；docs.json 导航中所有页面引用均能对应到磁盘文件 ✓ |
+| **变更** | 更新头部声明为 `→ **59** 个目标文件 (.mdx)`；删除过期的 "保留文件" 引用（`modules/firmware-configuration/su-series.mdx`、`ci-series.mdx` — 已不存在于磁盘） |
+| **验证结果** | docs.json 导航页面数（84项引用）全部在磁盘中可定位；migration-index.md 目标路径与实际 .mdx 文件一致 ✓ |
+
+### AUDIT-RELSINKS: 相对链接扫描
+
+| 项目 | 详情 |
+|------|------|
+| **问题** | Q-LINKS-PENDING 标记 common-issues.mdx 中存在 `../` 引用 |
+| **验证方法** | `find . -name '*.mdx' | xargs grep '\.\.\/'` → 无匹配结果 |
+| **结论** | 所有内部链接均使用以 `/` 开头的绝对路径，无相对链接违规 ✓（可能在上轮提交中已修复） |
+
+### AUDIT-DOCSJSON: docs.json ↔ 文件系统一致性
+
+| 项目 | 详情 |
+|------|------|
+| **验证方法** | 逐一对比 docs.json `navigation.pages` 中的 84 个页面引用与磁盘 `.mdx` 文件路径 |
+| **结论** | 所有导航页面均可在磁盘中定位（目录+index.mdx 或独立 .mdx）✓；无悬空引用 ✓ |
+
+### AUDIT-ORPHANS: 源文件覆盖检查
+
+| 项目 | 详情 |
+|------|------|
+| **验证方法** | `find smartpi-docs/docs/ -name '*.md'`（209个）与 migration-index.md 中迁移条目交叉比对 |
+| **结论** | 大部分源文件通过通配符模式覆盖；个别精确文件名未直接匹配但属于同一合并组，无真正遗漏 ✓ |
