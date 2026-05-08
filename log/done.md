@@ -1,1 +1,2 @@
 - [x] KBINDENT-FIX-01 | reference/knowledge-base-guide.mdx: <Step> 组件缩进不一致修复（line 22, \`<Step>\` 仅 1 空格 → 统一为 2 空格） | 2026-05-08
+- [x] PAREN-STANDARDIZE-01 | 标点统一: mdx 文件中半角右括号 ) → 全角 ）修复 — voice-tuning/index.mdx line 22, selection-guide.mdx lines 51/80/83/205/219; docs submodule c7c1f0f + 7f0a231 | 2026-05-08
