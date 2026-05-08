@@ -15,6 +15,8 @@
     ├── examples/           # 应用案例与平台示例 页 (.mdx)
     └── reference/          # 积木编程、芯片手册 页 (.mdx)
 
+.github-docs/codex_experiences/   # Codex 的工作经验记录，重要的事情或者经验可以放到其中
+.github-docs/human_review_opinion/   # Human 对于当前文档(Mintlify docs)的看法, codex需要去回答,有用的建议需要去做并修改
 .github-docs/log/           # 整理进度日志（重要：所有跟踪文件放这里，不是 workspace 根目录）
 smartpi-docs/               # 旧版 MkDocs 源码 (正在迁移中)
 ├── mkdocs.yml              # MkDocs 配置
