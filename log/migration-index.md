@@ -389,3 +389,18 @@
 | **变更** | 移除第 57、115 行的 `type="neutral"`，Accordion 恢复默认折叠行为（无类型样式） |
 | **结果** | Accordion 使用标准渲染样式，不再有无效 prop warning；`mintlify validate` 应通过 ✓ |
 
+
+---
+
+## 内容优化记录（2026-05-08）
+
+### SYNTAX-HIGHLIGHT-03: Bare code block language tags (58 openers across 18 files)
+
+| 项目 | 详情 |
+|------|------|
+| **问题** | 大量 `.mdx` 文件中的代码块使用裸 ` ``` `（无语言标签），导致语法高亮缺失。SYNTAX-HIGHLIGHT-01/02 已覆盖 console.mdx 和 platform-configuration/，本次补齐剩余所有目录。 |
+| **变更** | 为每个 bare opener 添加合适的语言标识符：<br>- `text`：纯文本数据、协议规范、架构图、接线图、配置示例（55 处）<br>- `cpp`：C++ 变量命名/类型定义代码（2 处）<br>- `arduino`：Arduino 函数实现（2 处） |
+| **影响文件** | application-scenarios/index.mdx, robot-faq.mdx, model-differences.mdx, step-by-step.mdx; faq.mdx; platform-and-firmware/*.mdx (3); platform-configuration/* (6); hardware-design/* (3); modules/ai-modules/jx-a7t.mdx; modules/offline-voice/jx-b5c.mdx |
+| **结果** | 18 个文件共 58 处 bare → labeled，所有代码块现具有正确的语法高亮能力。`knowledge-base-guide.mdx:124` 的 ```` ` 为嵌套代码块的合法闭合标记，无需修改。 |
+
+---
