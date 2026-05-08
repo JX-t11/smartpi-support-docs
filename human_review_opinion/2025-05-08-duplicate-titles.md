@@ -60,3 +60,16 @@ title: "平台配置概览"   ← Mintlify 自动渲染为页面标题
 - [ ] 统一修复：删除正文 `# 一级标题` 或改为更具体的副标题（如 `# 简介`）
 - [ ] 运行 `npx mintlify dev` 验证页面渲染正常
 - [ ] 确认侧边栏导航、面包屑标题显示正确
+
+---
+
+**修复记录**: 2026-05-08 — Codex Agent 已修复全部34个文件的重复标题问题
+- DUBTITLE-01: 修复了17个 index.mdx 页面（已完成）
+- DUBTITLE-REMAINING-02: 修复了剩余17个页面的完全重复 + 2个近重复
+- 所有文件 frontmatter `title` 与正文 H1 不再重复，Mintlify 自动渲染的页面标题唯一
+
+**验证结果**: 
+- ✅ 无剩余 exact duplicate（frontmatter title = H1）
+- ✅ 无剩余 near-duplicate（H1 以 frontmatter title 开头且差值<5字符）
+- ✅ 内部锚点链接均指向子章节，不受影响
+- ✅ `mintlify validate` 通过
