@@ -418,3 +418,23 @@
 | **变更** | 合并为单一 `beginner-guide.mdx`（184行），保留 `<Steps>` 组件格式、JSON 配置示例和平台优势章节；删除 `configuration-guide.mdx`；更新 `docs.json` 导航（移除 configuration-guide，仅保留 beginner-guide） |
 | **结果** | 页面总数从58→57，冗余内容减少42%，用户无需在两个相似页面间跳转获取完整指南信息。`mintlify validate` 应通过 ✓ |
 
+
+### 硬件设计补充内容（2026-05-08 新增）
+
+| # | 源文件路径 | 目标路径 | 状态 |
+|---|-----------|---------|------|
+| 36 | `product-design-guide/design-guide.md` (673行) → | `/guides/hardware-design/product-design.mdx` | ✅ 已补充 — 新增总体设计原则、PCB外壳配合问题分析（PCB外形/元器件布局/接口位置）、焊接质量控制建议、技术支持与资源获取章节。原 product-design.mdx 已有 MIC/振动/环境适配/智能音箱/3D打印线缆管理内容，本次为增量补充 |
+
+### 源文件状态备注（2026-05-08 审计）
+
+| # | 源文件路径 | 说明 |
+|---|-----------|------|
+| — | `faq/faq.md` (329行) | ❌ 无需迁移 — 内容已全部覆盖于 `/troubleshooting/faq.mdx`，无新增独立信息 |
+| — | `module-performance/module-selection.md` (155行) | ❌ 无需迁移 — 模组性能数据已全部整合至 `/modules/selection-guide.mdx` |
+
+### 待处理源文件
+
+| # | 源文件路径 | 计划目标 | 状态 |
+|---|-----------|---------|------|
+| — | `knowledge-base/kb-creation-guide.md` (132行) → | 整合到 `/guides/ai-agents/knowledge-base.mdx`（知识库文档创建格式指南） | ⏳ 待处理 |
+
