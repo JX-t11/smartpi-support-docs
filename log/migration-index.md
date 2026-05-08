@@ -432,9 +432,3 @@
 | — | `faq/faq.md` (329行) | ❌ 无需迁移 — 内容已全部覆盖于 `/troubleshooting/faq.mdx`，无新增独立信息 |
 | — | `module-performance/module-selection.md` (155行) | ❌ 无需迁移 — 模组性能数据已全部整合至 `/modules/selection-guide.mdx` |
 
-### 待处理源文件
-
-| # | 源文件路径 | 计划目标 | 状态 |
-|---|-----------|---------|------|
-| — | `knowledge-base/kb-creation-guide.md` (132行) → | 整合到 `/guides/ai-agents/knowledge-base.mdx`（知识库文档创建格式指南） | ⏳ 待处理 |
-
