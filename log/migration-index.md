@@ -404,3 +404,17 @@
 | **结果** | 18 个文件共 58 处 bare → labeled，所有代码块现具有正确的语法高亮能力。`knowledge-base-guide.mdx:124` 的 ```` ` 为嵌套代码块的合法闭合标记，无需修改。 |
 
 ---
+
+---
+
+## 内容优化记录（2026-05-08）
+
+### CONTENT-DUP-FIX-01: troubleshooting/platform-and-firmware/beginner-guide.mdx + configuration-guide.mdx 合并
+
+| 项目 | 详情 |
+|------|------|
+| **问题** | `beginner-guide.mdx`（188行）与 `configuration-guide.mdx`（166行）从同一源文件 `faq-platform-and-firmware/configuration-beginner-guide.md` 拆分但内容高度重复。两个页面均包含几乎相同的"为什么觉得配置麻烦？""快速上手三步法""功能分级策略""命令词精简原则""推荐学习路径"和"快速参考卡片"章节 |
+| **根因** | 迁移时过度拆分：将单页内容拆分为两页，但未合理分配差异化内容，导致读者需浏览两个页面才能获取完整信息 |
+| **变更** | 合并为单一 `beginner-guide.mdx`（184行），保留 `<Steps>` 组件格式、JSON 配置示例和平台优势章节；删除 `configuration-guide.mdx`；更新 `docs.json` 导航（移除 configuration-guide，仅保留 beginner-guide） |
+| **结果** | 页面总数从58→57，冗余内容减少42%，用户无需在两个相似页面间跳转获取完整指南信息。`mintlify validate` 应通过 ✓ |
+
