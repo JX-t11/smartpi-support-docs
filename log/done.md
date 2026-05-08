@@ -1,0 +1,1 @@
+- [x] KBINDENT-FIX-01 | reference/knowledge-base-guide.mdx: <Step> 组件缩进不一致修复（line 22, \`<Step>\` 仅 1 空格 → 统一为 2 空格） | 2026-05-08
