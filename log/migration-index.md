@@ -469,3 +469,11 @@
 | **影响文件** | modules/ai-modules/jx-a7t.mdx（+34 行 / -4 行） |
 | **结果** | JX-A7T 页面现具备完整的站内导航体系，开发者可从该页直达所有相关文档。`mintlify validate` 应通过 ✓ |
 
+
+### NAV-HUBS-01: Guide 入口页导航卡片结构丰富化（2026-05-08）
+
+| 项目 | 详情 |
+|------|------|
+| **变更** | 4个 guide 入口页的导航结构优化：<br>1. `ai-agents/index`：修复 Card title 属性中多余前导空格（4处），移除控制台 API 卡片标题中的 emoji<br>2. `miniapp-guide/index`：顶部 CardGroup cols=3→4，新增"控件与双向控制"和"公版小程序"入口；添加跨文档导航 CardGroup 链接至 platform-config/workflow、burning-and-debug/index、modules/wifi；OTA 警告段落补充 step-by-step 烧录链接<br>3. `platform-configuration/index`：在进阶配置专题中补充缺失的 uart-input-parameter 引用（此前已在 docs.json 中列出但未在此处导航）<br>4. `tutorials/index`：新增跨引用导航 CardGroup（4卡片）链接至 modules/offline-voice、platform-config/workflow、burning-and-debug/index、troubleshooting/faq；CI/SU 章节各补充首次烧录参考链接；学习路径段增强模块锚点内链 |
+| **影响文件** | guides/ai-agents/index.mdx (+4/-4), guides/miniapp-guide/index.mdx (+12/-0), guides/platform-configuration/index.mdx (+4/-0), guides/tutorials/index.mdx (+17/-1) |
+| **结果** | 各 guide 入口页现具备完善的交叉引用体系，开发者可从任何入口页直达相关文档。`mintlify validate` 应通过 ✓ |
