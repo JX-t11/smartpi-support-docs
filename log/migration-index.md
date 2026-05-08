@@ -491,3 +491,16 @@
 - 在页面顶部增加「相关文档」导航提示，链接到 hardware-faq、model-differences、platform-config
 - 方案选型表中为 CI-03T、SU-03T、JX-A7T 添加模块页面内部链接
 - "常见问题速查"区域添加硬件设计 FAQ 参考
+
+
+## 内容优化记录（2026-05-08）续
+
+### NAVSTRUCTURE-04: guides/hardware-design/faq.mdx Accordion TOC + 章节折叠
+
+| 项目 | 详情 |
+|------|------|
+| **问题** | `guides/hardware-design/faq.mdx`（994行）使用 `<Steps>` 组件作为页面目录，但 Steps 是顺序步骤组件而非导航索引。长页无折叠机制，阅读体验差 |
+| **变更** | ①将 `<Steps>` TOC 替换为 `<Accordion title="📋 文档目录">` + 锚点链接（10个分类）；②各 `##` 章节内容包裹于独立 `<Accordion>` 中，支持展开/折叠；③顶部新增 Callout 提示型号差异参考页 |
+| **影响文件** | guides/hardware-design/faq.mdx (994→1013行, +46/-27) |
+| **结果** | FAQ 页面现与 common-issues.mdx 等页面导航风格一致，用户可按需展开感兴趣的主题分类。`mintlify validate` 通过 ✓ |
+
