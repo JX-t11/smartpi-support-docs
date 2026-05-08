@@ -432,3 +432,18 @@
 | — | `faq/faq.md` (329行) | ❌ 无需迁移 — 内容已全部覆盖于 `/troubleshooting/faq.mdx`，无新增独立信息 |
 | — | `module-performance/module-selection.md` (155行) | ❌ 无需迁移 — 模组性能数据已全部整合至 `/modules/selection-guide.mdx` |
 
+
+---
+
+## 错误修复记录（2026-05-08）
+
+### MINT-JSX-PARSE-01: knowledge-base.mdx Mintlify JSX 解析错误修复
+
+| 项目 | 详情 |
+|------|------|
+| **问题** | `guides/ai-agents/knowledge-base.mdx` 存在两处导致 Mintlify parser 报错的 `<Callout>` 结构：<br>1. line ~76: `<Callout type="info">` 内包裹 markdown table → `<Tab>` 组件内 Markdown 列表项解析冲突<br>2. line ~181: ```` ```</Callout>```` 代码块闭合标签与 Callout 闭合标签合并为一行，导致 parser 无法识别嵌套边界 |
+| **根因** | Mintlify MDX 解析器不支持在 `<Callout>` JSX 组件内直接包含 markdown table 或 code block（非简单文本内容），也不支持在代码块闭合 ` ``` ` 后紧跟 `</Callout>` 的紧凑写法 |
+| **变更** | - Fix 1: 将图片处理规范 Callout 改为单行闭合 `<Callout type="info">**标题**</Callout>`，table 移至组件外<br>- Fix 2: 将知识库元数据 JSON 模板 Code Block 从 Callout 内移至外部独立段落+代码块 |
+| **结果** | `mintlify validate` success build validation passed ✓ |
+| **提交**: c27010a (main) + 2d7ecc4 (docs submodule) |
+
