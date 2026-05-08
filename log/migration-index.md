@@ -447,3 +447,15 @@
 | **结果** | `mintlify validate` success build validation passed ✓ |
 | **提交**: c27010a (main) + 2d7ecc4 (docs submodule) |
 
+
+## 格式修复记录（2026-05-08）续
+
+### ACCORDION-LSPC-01: Accordion title 属性前多余空格清理
+
+| 项目 | 详情 |
+|------|------|
+| **问题** | 3个 .mdx 文件中共 8 处 `<Accordion title=" `` 存在标题前的多余空格，导致折叠面板显示时标题带有额外前导空白 |
+| **影响文件** | `getting-started/quickstart.mdx`(3处)、`getting-started/first-burn.mdx`(3处)、`guides/platform-configuration/gpio-timing-and-error.mdx`(2处) |
+| **变更** | 移除所有 Accordion title 属性值开头的空格字符（共8个） |
+| **结果** | Accordion 折叠面板标题显示正常；`mintlify validate` 通过 ✓ |
+
