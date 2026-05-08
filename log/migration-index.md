@@ -1,7 +1,7 @@
 # SmartPi 文档迁移索引
 
 > 最后更新: 2026-05-07  
-> 总计: **209** 个源文件 (`.md`) → **58** 个目标文件 (`.mdx`)  
+> 总计: **209** 个源文件 (`.md`) → **57** 个目标文件 (`.mdx`)  
 > 迁移方式: 内容分析整合、结构重构、格式转换，非逐字复制
 
 ---
@@ -341,8 +341,8 @@
 
 | 检查项 | 状态 | 说明 |
 |--------|------|------|
-| docs.json ↔ .mdx 文件匹配 | ✅ PASS | 58 nav entries = 58 files on disk, all consistent |
-| frontmatter（title/description/icon） | ✅ PASS | 全部 58 文件完整 |
+| docs.json ↔ .mdx 文件匹配 | ✅ PASS | 57 nav entries = 57 files on disk, all consistent |
+| frontmatter（title/description/icon） | ✅ PASS | 全部 57 文件完整 |
 | 链接绝对化（无 `../`） | ✅ PASS | 所有内部链接以 `/` 开头且可解析 |
 | 图片 alt 文本 | ✅ PASS | 无空 alt-text |
 | MkDocs 组件残留 | ✅ PASS | 无 `!!!` / `???` 语法残留 |
