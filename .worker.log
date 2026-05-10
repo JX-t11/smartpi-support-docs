@@ -13573,3 +13573,8 @@ CODEX_ACTION|no_pending_tasks
 2026-05-10 17:30:42 [WORKER] Claude error exit=1
 2026-05-10 17:30:42 [WORKER] === [Codex] Round ===
 2026-05-10 17:30:42 [WORKER] Codex resuming session: 019e0e3f-bb66-7852-b069-94c074578cd2
+
+2026-05-10 17:XX:XX [WORKER] Pending item check:
+2026-05-10 17:XX:XX - Q-LINKS-PENDING (migration-index.md:171): Verified NO relative ../ links remain in any .mdx files. Item already resolved.
+2026-05-10 17:XX:XX - Duplicate title issue (human_review_opinion/2025-05-08-duplicate-titles.md): Already marked "已经解决" by Human, verified fixed in commit e1bc1a3.
+2026-05-10 17:XX:XX - Main repo push to origin/master BLOCKED: GitHub HTTPS endpoint unreachable (ping works but curl fails). Two unpushed commits: af83f3a and ff21356 (.worker.log updates only). No code changes pending.
