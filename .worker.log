@@ -13554,3 +13554,22 @@ CODEX_ACTION|...
 2026-05-10 17:10:07 [WORKER] Claude error exit=1
 2026-05-10 17:10:07 [WORKER] === [Codex] Round ===
 2026-05-10 17:10:07 [WORKER] Codex resuming session: 019e0e3f-bb66-7852-b069-94c074578cd2
+2026-05-10 17:30:07 [WORKER] Codex action: CODEX_ACTION|no_pending_tasks
+2026-05-10 17:30:07 [WORKER]   > 2026-05-10T17:30:01.280314Z ERROR codex_core::tools::router: error=cannot update goal for thread 019e0e3f-bb66-7852-b069-94c074578cd2: no goal exists
+2026-05-10 17:30:07 [WORKER]   > 2026-05-10T17:30:04.075076Z ERROR codex_core::tools::router: error=cannot update goal for thread 019e0e3f-bb66-7852-b069-94c074578cd2: no goal exists
+2026-05-10 17:30:07 [WORKER]   > 2026-05-10T17:30:06.881338Z ERROR codex_core::tools::router: error=cannot update goal for thread 019e0e3f-bb66-7852-b069-94c074578cd2: no goal exists
+2026-05-10 17:30:07 [WORKER] Round done. Claude=2026-05-10 17:10:03 [WORKER] === [Claude] Round ===
+2026-05-10 17:10:03 [WORKER] Claude resuming session: 80576330-4d20-4178-9cc9-1d57d96286bd
+2026-05-10 17:10:07 [WORKER] Claude error exit=1 Codex=2026-05-10 17:10:07 [WORKER] === [Codex] Round ===
+2026-05-10 17:10:07 [WORKER] Codex resuming session: 019e0e3f-bb66-7852-b069-94c074578cd2
+2026-05-10 17:30:07 [WORKER] Codex action: CODEX_ACTION|no_pending_tasks
+2026-05-10 17:30:07 [WORKER]   > 2026-05-10T17:30:01.280314Z ERROR codex_core::tools::router: error=cannot update goal for thread 019e0e3f-bb66-7852-b069-94c074578cd2: no goal exists
+2026-05-10 17:30:07 [WORKER]   > 2026-05-10T17:30:04.075076Z ERROR codex_core::tools::router: error=cannot update goal for thread 019e0e3f-bb66-7852-b069-94c074578cd2: no goal exists
+2026-05-10 17:30:07 [WORKER]   > 2026-05-10T17:30:06.881338Z ERROR codex_core::tools::router: error=cannot update goal for thread 019e0e3f-bb66-7852-b069-94c074578cd2: no goal exists
+CODEX_ACTION|no_pending_tasks
+2026-05-10 17:30:37 [WORKER] --- Round ---
+2026-05-10 17:30:38 [WORKER] === [Claude] Round ===
+2026-05-10 17:30:38 [WORKER] Claude resuming session: 80576330-4d20-4178-9cc9-1d57d96286bd
+2026-05-10 17:30:42 [WORKER] Claude error exit=1
+2026-05-10 17:30:42 [WORKER] === [Codex] Round ===
+2026-05-10 17:30:42 [WORKER] Codex resuming session: 019e0e3f-bb66-7852-b069-94c074578cd2
