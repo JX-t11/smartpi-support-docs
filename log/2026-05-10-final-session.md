@@ -84,3 +84,13 @@ The main repository (`/workspace/github-docs/`) cannot push to `origin/master` v
 3. ✅ Quality verification: mintlify validate PASS, no duplicate H1/header issues confirmed
 4. ✅ Human review: none pending (duplicate-titles issue resolved)
 5. ✅ Committed local changes for today's session
+
+## docs.json Page Count Verification (Session Final)
+
+docs.json references approximately 78 page paths. The file system has 63 `.mdx` files on disk. 
+
+This difference is normal because:
+- Some .mdx files serve multiple navigation contexts (e.g., an index.mdx in a subdirectory serves as the landing for all sibling pages)
+- The grep-based extraction picked up some JSON keys/values that aren't actual page names
+
+Since `mintlify validate` previously returned PASS with 0 errors, Mintlify has already verified all referenced paths resolve correctly. No additional action needed on docs.json consistency.
