@@ -13382,3 +13382,22 @@ CODEX_ACTION|no_action_needed
 2026-05-10 16:31:09 [WORKER] Claude error exit=1
 2026-05-10 16:31:09 [WORKER] === [Codex] Round ===
 2026-05-10 16:31:09 [WORKER] Codex resuming session: 019e0e3f-bb66-7852-b069-94c074578cd2
+2026-05-10 16:44:10 [WORKER] Codex action: CODEX_ACTION|PENDING_SUBMODULE_SYNC
+2026-05-10 16:44:10 [WORKER]   > 2026-05-10T16:44:01.005344Z ERROR codex_core::session: failed to record rollout items: thread 019e0e3f-bb66-7852-b069-94c074578cd2 not found
+2026-05-10 16:44:10 [WORKER]   > 2026-05-10T16:44:01.005448Z ERROR codex_core::session: failed to record rollout items: thread 019e0e3f-bb66-7852-b069-94c074578cd2 not found
+2026-05-10 16:44:10 [WORKER]   > 2026-05-10T16:44:01.005534Z ERROR codex_core::session: failed to record rollout items: thread 019e0e3f-bb66-7852-b069-94c074578cd2 not found
+2026-05-10 16:44:10 [WORKER] Round done. Claude=2026-05-10 16:31:05 [WORKER] === [Claude] Round ===
+2026-05-10 16:31:05 [WORKER] Claude resuming session: 80576330-4d20-4178-9cc9-1d57d96286bd
+2026-05-10 16:31:09 [WORKER] Claude error exit=1 Codex=2026-05-10 16:31:09 [WORKER] === [Codex] Round ===
+2026-05-10 16:31:09 [WORKER] Codex resuming session: 019e0e3f-bb66-7852-b069-94c074578cd2
+2026-05-10 16:44:10 [WORKER] Codex action: CODEX_ACTION|PENDING_SUBMODULE_SYNC
+2026-05-10 16:44:10 [WORKER]   > 2026-05-10T16:44:01.005344Z ERROR codex_core::session: failed to record rollout items: thread 019e0e3f-bb66-7852-b069-94c074578cd2 not found
+2026-05-10 16:44:10 [WORKER]   > 2026-05-10T16:44:01.005448Z ERROR codex_core::session: failed to record rollout items: thread 019e0e3f-bb66-7852-b069-94c074578cd2 not found
+2026-05-10 16:44:10 [WORKER]   > 2026-05-10T16:44:01.005534Z ERROR codex_core::session: failed to record rollout items: thread 019e0e3f-bb66-7852-b069-94c074578cd2 not found
+CODEX_ACTION|PENDING_SUBMODULE_SYNC
+2026-05-10 16:44:40 [WORKER] --- Round ---
+2026-05-10 16:44:41 [WORKER] === [Claude] Round ===
+2026-05-10 16:44:41 [WORKER] Claude resuming session: 80576330-4d20-4178-9cc9-1d57d96286bd
+2026-05-10 16:44:45 [WORKER] Claude error exit=1
+2026-05-10 16:44:45 [WORKER] === [Codex] Round ===
+2026-05-10 16:44:45 [WORKER] Codex resuming session: 019e0e3f-bb66-7852-b069-94c074578cd2
