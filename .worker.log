@@ -13795,3 +13795,54 @@ CODEX_ACTION|...
 2026-05-10 18:20:04 [WORKER] Claude error exit=1
 2026-05-10 18:20:04 [WORKER] === [Codex] Round ===
 2026-05-10 18:20:04 [WORKER] Codex resuming session: 019e0e3f-bb66-7852-b069-94c074578cd2
+2026-05-10 18:26:34 [WORKER] Codex action: CODEX_ACTION|CONCLUDE
+2026-05-10 18:26:34 [WORKER]   > The documentation migration is **complete**. All 63 target `.mdx` files have been created, validated, and published via the docs submodule push. The only remaining unpushed items are internal tracking log entries that do not affect the published documentation.
+2026-05-10 18:26:34 [WORKER]   > CODEX_ACTION|CONCLUDE - documentation migration complete with zero pending items; main repo push blocked by missing GitHub credentials (unpushed commits are .worker.log updates only)
+2026-05-10 18:26:34 [WORKER] Round done. Claude=2026-05-10 18:20:00 [WORKER] === [Claude] Round ===
+2026-05-10 18:20:00 [WORKER] Claude resuming session: 80576330-4d20-4178-9cc9-1d57d96286bd
+2026-05-10 18:20:04 [WORKER] Claude error exit=1 Codex=2026-05-10 18:20:04 [WORKER] === [Codex] Round ===
+2026-05-10 18:20:04 [WORKER] Codex resuming session: 019e0e3f-bb66-7852-b069-94c074578cd2
+2026-05-10 18:26:34 [WORKER] Codex action: CODEX_ACTION|CONCLUDE
+2026-05-10 18:26:34 [WORKER]   > The documentation migration is **complete**. All 63 target `.mdx` files have been created, validated, and published via the docs submodule push. The only remaining unpushed items are internal tracking log entries that do not affect the published documentation.
+2026-05-10 18:26:34 [WORKER]   > CODEX_ACTION|CONCLUDE - documentation migration complete with zero pending items; main repo push blocked by missing GitHub credentials (unpushed commits are .worker.log updates only)
+CODEX_ACTION|CONCLUDE
+2026-05-10 18:27:04 [WORKER] --- Round ---
+2026-05-10 18:27:04 [WORKER] === [Claude] Round ===
+2026-05-10 18:27:04 [WORKER] Claude resuming session: 80576330-4d20-4178-9cc9-1d57d96286bd
+2026-05-10 18:27:08 [WORKER] Claude error exit=1
+2026-05-10 18:27:08 [WORKER] === [Codex] Round ===
+2026-05-10 18:27:08 [WORKER] Codex resuming session: 019e0e3f-bb66-7852-b069-94c074578cd2
+2026-05-10 18:27:39 [WORKER] Codex action: CODEX_ACTION|complete
+2026-05-10 18:27:39 [WORKER]   > CODEX_ACTION|complete
+2026-05-10 18:27:39 [WORKER]   > 2026-05-10T18:27:29.934966Z ERROR codex_core::session: failed to record rollout items: thread 019e0e3f-bb66-7852-b069-94c074578cd2 not found
+2026-05-10 18:27:39 [WORKER] Round done. Claude=2026-05-10 18:27:04 [WORKER] === [Claude] Round ===
+2026-05-10 18:27:04 [WORKER] Claude resuming session: 80576330-4d20-4178-9cc9-1d57d96286bd
+2026-05-10 18:27:08 [WORKER] Claude error exit=1 Codex=2026-05-10 18:27:08 [WORKER] === [Codex] Round ===
+2026-05-10 18:27:08 [WORKER] Codex resuming session: 019e0e3f-bb66-7852-b069-94c074578cd2
+2026-05-10 18:27:39 [WORKER] Codex action: CODEX_ACTION|complete
+2026-05-10 18:27:39 [WORKER]   > CODEX_ACTION|complete
+2026-05-10 18:27:39 [WORKER]   > 2026-05-10T18:27:29.934966Z ERROR codex_core::session: failed to record rollout items: thread 019e0e3f-bb66-7852-b069-94c074578cd2 not found
+CODEX_ACTION|complete
+2026-05-10 18:28:09 [WORKER] --- Round ---
+2026-05-10 18:28:09 [WORKER] === [Claude] Round ===
+2026-05-10 18:28:09 [WORKER] Claude resuming session: 80576330-4d20-4178-9cc9-1d57d96286bd
+2026-05-10 18:28:13 [WORKER] Claude error exit=1
+2026-05-10 18:28:13 [WORKER] === [Codex] Round ===
+2026-05-10 18:28:13 [WORKER] Codex resuming session: 019e0e3f-bb66-7852-b069-94c074578cd2
+2026-05-10 18:28:41 [WORKER] Codex action: CODEX_ACTION|NO_ACTION_NEEDED|Board
+2026-05-10 18:28:41 [WORKER]   > No actionable items remain on the board or migration index. The remaining blocker (main repo auth) requires external credential configuration outside this sandbox and does not affect published docs content.
+2026-05-10 18:28:41 [WORKER]   > CODEX_ACTION|NO_ACTION_NEEDED|Board is clear, migration complete, all checks pass — only main repo push blocked by missing GitHub credentials (no impact on published docs)
+2026-05-10 18:28:41 [WORKER] Round done. Claude=2026-05-10 18:28:09 [WORKER] === [Claude] Round ===
+2026-05-10 18:28:09 [WORKER] Claude resuming session: 80576330-4d20-4178-9cc9-1d57d96286bd
+2026-05-10 18:28:13 [WORKER] Claude error exit=1 Codex=2026-05-10 18:28:13 [WORKER] === [Codex] Round ===
+2026-05-10 18:28:13 [WORKER] Codex resuming session: 019e0e3f-bb66-7852-b069-94c074578cd2
+2026-05-10 18:28:41 [WORKER] Codex action: CODEX_ACTION|NO_ACTION_NEEDED|Board
+2026-05-10 18:28:41 [WORKER]   > No actionable items remain on the board or migration index. The remaining blocker (main repo auth) requires external credential configuration outside this sandbox and does not affect published docs content.
+2026-05-10 18:28:41 [WORKER]   > CODEX_ACTION|NO_ACTION_NEEDED|Board is clear, migration complete, all checks pass — only main repo push blocked by missing GitHub credentials (no impact on published docs)
+CODEX_ACTION|NO_ACTION_NEEDED|Board
+2026-05-10 18:29:11 [WORKER] --- Round ---
+2026-05-10 18:29:11 [WORKER] === [Claude] Round ===
+2026-05-10 18:29:11 [WORKER] Claude resuming session: 80576330-4d20-4178-9cc9-1d57d96286bd
+2026-05-10 18:29:15 [WORKER] Claude error exit=1
+2026-05-10 18:29:15 [WORKER] === [Codex] Round ===
+2026-05-10 18:29:15 [WORKER] Codex resuming session: 019e0e3f-bb66-7852-b069-94c074578cd2
